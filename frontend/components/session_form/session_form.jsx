@@ -8,14 +8,7 @@ class SessionForm extends React.Component{
             password: ''
         };
         this. handleSubmit = this.handleSubmit.bind(this);
-        this.update = this.update.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
-    }
-
-    handleSubmit(e){
-        e.preventDefault();
-        const user = Object.assign({}, this.state)
-        this.props.processForm(user);
     }
 
     update(field) {
@@ -23,11 +16,17 @@ class SessionForm extends React.Component{
             [field]: e.currentTarget.value
         });
     }
+    handleSubmit(e){
+        e.preventDefault();
+        const user = Object.assign({}, this.state)
+        this.props.processForm(user);
+    }
 
     renderErrors() {
+        debugger
         return (
             <ul>
-                {Object.values(this.props.errors).map((error, i) => (
+                {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
                     </li>
@@ -39,21 +38,21 @@ class SessionForm extends React.Component{
     render(){
         return(
             <div className="login-form-container" >
-                {/* {console.log(this.props)} */}
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Welcome to thinkThrough 
                     <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
-                        <label>
-                            Email:
+                        <br />
+                        <label>Email:
                             <input type="text" value={this.state.email} onChange={this.update('email')} className="login-input" />
                         </label>
-                        <label>
-                            Password:
+                        <br />
+                        <label>Password:
                             <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
                         </label>
+                        <br />
                         <input className="form-submit" type="submit" value={this.props.formType} />
                     </div>
                 </form>

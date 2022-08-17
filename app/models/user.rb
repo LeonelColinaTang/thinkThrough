@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-     before_validation :ensure_session_token 
+    before_validation :ensure_session_token 
 
     validates :email, presence: true, uniqueness: true 
     validates :password_digest, presence: true 
@@ -16,8 +16,6 @@ class User < ApplicationRecord
         class_name: :Comment
 
     attr_reader :password 
-
-
 
     def self.find_by_credentials(email, password)
         user =User.find_by(email: email)
