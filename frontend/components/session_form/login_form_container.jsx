@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../../actions/session_actions';
 import SessionForm from './session_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = ({errors}) => {
     return {
@@ -14,7 +15,12 @@ const mapStateToProps = ({errors}) => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-    processForm: (user) => dispatch(loginUser(user))
-}};
+        processForm: (user) => dispatch(loginUser(user)),
+        otherForm: (
+            <button onClick={() => dispatch(openModal('signup'))}> Signup</button>
+        ),
+        closeModal: () => dispatch(closeModal())
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
