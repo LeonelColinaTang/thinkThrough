@@ -1,20 +1,30 @@
 .small-logo{
     width: 30px;
 }
-
-#get-started-button{
-    border: 1px solid black;
-    background: black;
-    color: white;
+.login-signup{
+    font-family: 'sone';
+    font-weight: 100;
+}
+.get-started-button{
+    border: 1px solid rgba(25, 25, 25, 1);;
+    background: rgba(25, 25, 25, 1);;
+    color: rgba(255, 255, 255, 1);
     border-radius: 30px;
     padding: 10px;
     width: 100px;
+}
+.get-started-button:hover {
+    background: rgba(0, 0, 0, 1);
 }
 
 #login-navbar-link, #think-through{
     text-decoration: none;
     color: black;
     align-self: center;
+}
+#login-navbar-link{
+    font-size: 14px;
+    line-height: 20px;
 }
 
 #think-through{

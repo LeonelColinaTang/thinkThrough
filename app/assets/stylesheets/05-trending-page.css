@@ -1,0 +1,102 @@
+.main-trending-container{
+    height: 345px;
+    border-bottom: 1px solid lightgray;
+    font-family: sone;
+    padding-bottom: 16px;
+}
+.trending-container{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+#trending-title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 40px;
+    font-family: sone-bold;
+    font-size: 12px;
+    letter-spacing: 0.083em;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+#trending-title-container img{
+    width: 30px;
+}
+
+.trending-posts-container{
+    counter-reset: x;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 33.333%);
+    height: 275px;
+    width: 70%;
+    margin: auto;
+}
+
+.post-counter-container::after{
+    counter-increment: x;
+    content: "0"counter(x); 
+    font-size: 30px;
+    color: rgba(230, 230, 230, 1);
+    font-weight: 700;
+    line-height: 36px;
+    font-family: sone-bold;
+    letter-spacing: 0;
+    margin-right: 16px;
+}
+.post-counter-container{
+    align-self: flex-start;
+}
+
+
+.post-info-container{
+    height: 100%;
+    padding-top: 5px;
+}
+
+.trending-post{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title-trending-post{
+    font-family: sone-bold;
+    font-size: 16px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    color: rgba(41, 41, 41, 1);
+    max-height: 40px;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.creator-trending-post{
+    color: rgba(41,41,41,1);
+    padding-right: 2px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.creator-trending-post img{
+    width: 30px;
+}
+
+.time-info-trending-post{
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(117,117,117,1);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.dot-container{
+    padding: 0 5px 5px 5px;
+}

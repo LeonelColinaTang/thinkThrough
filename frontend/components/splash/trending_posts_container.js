@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import SplashPage from "./splash_page";
-import { openModal } from '../../actions/modal_actions';
+import TrendingPosts from "./trending_posts";
+// import { openModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = ({ session }) => ({
@@ -8,9 +8,9 @@ const mapStateToProps = ({ session }) => ({
     currentUser: session.id
 });
 
-const mapDispatchToProps = dispatch =>({
+const mapDispatchToProps = dispatch => ({
     openModal: modal => dispatch(openModal(modal))
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SplashPage);
+export default connect(mapStateToProps, null)(TrendingPosts);

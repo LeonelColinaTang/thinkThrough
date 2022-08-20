@@ -5,6 +5,8 @@ import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
+import SplashPageContainer from "./splash/splash_page_container";
+import TrendingPostContainer from "./splash/trending_posts_container";
 
 import Modal from './modal/modal';
 
@@ -15,8 +17,9 @@ const App = () =>(
         <Modal />
         <header>
             <GreetingContainer /> 
-               
         </header>
+            <SplashPageContainer />
+            <TrendingPostContainer />
     </div>
 );
 

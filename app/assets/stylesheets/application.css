@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+    font-family: 'sone';
+    src: url('Sohne-Leicht.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sone-bold';
+    src: url('Sohne-Dreiviertelfett.woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sone-bolder';
+    src: url('Sohne-Extrafett.woff2');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sone';
+    src: url('Sohne-Halbfett.woff2');
+    font-weight: bolder;
+    font-style: normal;
+}
