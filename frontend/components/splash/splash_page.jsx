@@ -14,7 +14,7 @@ const SplashPage = ({ currentUser, openModal }) => {
                     </div>
                 </div>
                 <div id="moving-letters">
-
+                    
                 </div>
             </div>
         </>

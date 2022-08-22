@@ -1,0 +1,117 @@
+.outer-infinite-posts-container{
+    padding-top: 56px;
+}
+
+.inner-infinite-posts-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infinite-posts-grid-container{
+    width: 70%;
+    margin: 0 64px;
+}
+
+.infinite-posts-grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) repeat(4, minmax(48px,1fr));
+}
+
+.infinite-posts{
+    grid-column: 1 / span 7;
+}
+
+.tags-footer-container{
+    grid-column: 9 / span 4;
+}
+
+.infinite-post{
+    margin-bottom: 48px;
+}
+
+.post-pic-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-left-info{
+    margin-right: 20px;
+}
+
+.post-right-pic img{
+    width: 200px;
+    height: 134px;
+    background-color: black;
+}
+
+.author-pic-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.author-small-pic{
+    border-radius: 50%;
+    background-color: rgba(242, 242, 242, 1);
+}
+.author-small-pic img{
+    width: 20px;
+    height: 20px;
+    padding-top: 2px;
+}
+
+.author-small-name{
+    margin-left: 8px;
+}
+
+.author-small-name-link{
+    text-decoration: none;
+    color: rgba(41, 41, 41, 1);
+    font-family: sone;
+    font-size: 13px;
+    font-weight: bolder;
+    line-height: 16px;
+}
+.title-description-link{
+    text-decoration: none;
+}
+.infinite-post-title{
+    color: rgba(41,41,41,1);
+    font-size: 22px;
+    font-family: sone-bold;
+    line-height: 28px;
+}
+
+.infinite-post-description {
+    padding-top: 4px;
+    font-size: 16px;
+    font-family: sone;
+    line-height: 20px;
+    color: rgba(117,117,117,1);
+}
+
+.infinite-post-date-time-save-container{
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 8px; */
+    align-items: baseline;
+    font-family: sone;
+    color: rgba(117, 117, 117, 1);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.infinite-post-date-time{
+    display: flex;
+    align-items: center;
+}
+
+.infinite-post-date-time div{
+    padding: 0 6px;
+    padding-bottom: 7px;
+}
+
+.infinite-post-date-time div span{
+    display: block;
+}

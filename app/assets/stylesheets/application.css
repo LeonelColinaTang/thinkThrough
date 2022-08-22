@@ -13,6 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+     font-family: 'gtsuper';
+     src: url('GT-Super-Display-Regular');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'gtsuperbold';
+     src: url('GT-Super-Display-Bold');
+     font-weight: bold;
+     font-style: bold;
+ }
+ 
 @font-face {
     font-family: 'sone';
     src: url('Sohne-Leicht.woff2');
@@ -40,3 +55,11 @@
     font-weight: bolder;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'gtsupermedium';
+    src: url('GT-Super-Display-Medium');
+    font-weight: medium;
+    font-style: medium;
+}
+

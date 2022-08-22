@@ -1,14 +1,14 @@
-
-
 .splash-yellow-container{
     background: #FFC017;
     border-bottom: 1px solid black;
     padding-top: 75px;
+    display: flex;
 }
 #stay-curious-div{
     height: 455px;
     width: 80%;
     margin: auto;
+    z-index: 1;
 }
 
 #stay-curious-flex-div{
@@ -52,4 +52,12 @@
 
 #start-reading-button:hover{
     background: rgba(0, 0, 0, 1);
+}
+
+#moving-letters{
+    position: absolute;
+    height: 455px;
+    width: 50%;
+    right: 0;
+    background: url('medium.gif');
 }

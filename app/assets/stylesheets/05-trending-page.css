@@ -88,6 +88,11 @@
     width: 30px;
 }
 
+.creator-trending-post a, .title-trending-post a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .time-info-trending-post{
     font-size: 13px;
     line-height: 20px;

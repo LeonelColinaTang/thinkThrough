@@ -7,6 +7,7 @@ import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import SplashPageContainer from "./splash/splash_page_container";
 import TrendingPostContainer from "./splash/trending_posts_container";
+import InfinitePostsContainer from "./splash/infinite_posts_container";
 
 import Modal from './modal/modal';
 
@@ -20,6 +21,7 @@ const App = () =>(
         </header>
             <SplashPageContainer />
             <TrendingPostContainer />
+            <InfinitePostsContainer />
     </div>
 );
 

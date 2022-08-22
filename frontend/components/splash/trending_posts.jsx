@@ -60,10 +60,10 @@ const trendingPosts = ({ currentUser }) => {
                         <div className="post-info-container">
                             <div className="creator-trending-post">
                                 <img src={window.smallTrendingLogo} />
-                                {post.author}
+                                <a href="#">{post.author}</a>
                             </div>
                             <div className="title-trending-post">
-                                {post.title}
+                                <a href="#">{post.title}</a>
                             </div>
                             <div className="time-info-trending-post">
                                 <div>{post.date}</div>
