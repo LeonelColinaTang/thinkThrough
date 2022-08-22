@@ -29,7 +29,8 @@
 
 #think-through{
     display: flex;
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    margin-left: 15%;
 }
 
 #think-through span{
