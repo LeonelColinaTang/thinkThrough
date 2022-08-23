@@ -1,0 +1,124 @@
+.for-you-menu-padding{
+    padding-top: 42px;
+    
+}
+
+.for-you-menu{
+    display: flex;
+    max-width: 692px;
+        box-shadow: rgb(230 230 230) 0px -1px 0px inset;
+}
+.for-you-item{
+    margin-right: 32px;
+    padding-bottom: 16px;
+}
+.for-you-item a{
+    font-family: sone;
+    font-size: 14px;
+    line-height: 20p;
+    text-decoration: none;
+    color: rgba(117, 117, 117, 1);
+    text-transform: capitalize;
+}
+
+.for-you-item:hover {
+    color: rgba(41, 41, 41, 1);
+    border-bottom: 1px solid rgba(117,117,117,1);
+}
+
+
+/* --------------- */
+.posts-index-container{
+    padding-top: 50px;
+    font-family: sone;
+}
+.posts-index-container a{
+    text-decoration: none;
+}
+.single-post {
+    max-width: 692px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(117, 117, 117, 1);
+}
+.single-post-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 20px;
+    /* border-bottom: 1px solid rgba(117, 117, 117, 1); */
+}
+.title-body-single-post-container{
+    margin-top: -30px;
+}
+.post-author-pic a img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.post-author-pic a{
+    display: flex;
+}
+.post-author-name{
+    margin-left: 8px;
+}
+.post-author-name a, .post-written-date{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(41,41,41,1);
+}
+.post-written-date{
+    color: rgba(117, 117, 117, 1);
+    margin-left: 5px;
+}
+
+
+.name-date-single-post-container{
+    display: flex;
+    align-items: center;
+}
+
+.single-post-title{
+    padding-bottom: 8px;
+    font-size: 22px;
+    font-family: sone-bold;
+    line-height: 28px;
+    color: rgba(41,41,41,1);
+    margin-top: 12px;
+}
+.single-post-body{
+    font-family: sone;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(41, 41, 41, 1);
+}
+
+
+.time-save-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-save-container div:first-child{
+    display: flex;
+    font-size: 13px;
+    color: rgba(117, 117, 117, 1);
+    line-height: 20px;
+}
+
+.time-save-container div:first-child div:first-child{
+    padding: 2px 16px 2px 8px;
+}
+.time-save-container div:first-child div:last-child {
+    padding-top: 2px;
+}
+
+.single-post-image img{
+    width: 112px;
+    height: 112px;
+}
+

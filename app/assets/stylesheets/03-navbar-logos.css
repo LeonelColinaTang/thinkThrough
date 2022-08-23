@@ -17,7 +17,7 @@
     background: rgba(0, 0, 0, 1);
 }
 
-#login-navbar-link, #think-through{
+#login-navbar-link, .think-through{
     text-decoration: none;
     color: black;
     align-self: center;
@@ -27,19 +27,19 @@
     line-height: 20px;
 }
 
-#think-through{
+.think-through{
     display: flex;
     /* margin-left: 80px; */
     margin-left: 15%;
 }
 
-#think-through span{
+.think-through span{
     font-size: 25px;
     font-weight: 600;
     align-self: center;
 }
 
-#think-through img {
+.think-through img {
     margin-right: 20px;
     width: 45px;
 }
