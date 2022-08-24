@@ -1,6 +1,11 @@
 .for-you-menu-padding{
     padding-top: 42px;
-    
+}
+.articles-container > div:nth-child(2){
+    position: sticky;
+    top: 0px;
+    background: rgba(255, 255, 255, 1);
+    padding-top: 15px;
 }
 
 .for-you-menu{

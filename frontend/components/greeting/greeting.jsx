@@ -3,7 +3,7 @@ import React from "react";
 const Greeting = ({currentUser, logout, openModal}) =>{
 
     const POSTMOCK = {
-        5: {
+        1: {
             author: "Kyle Ginzburg",
             title: "How not to kill your cohort",
             body: "lorem ipsum whatever I don't remember",
@@ -11,7 +11,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             tag: "self-control",
             length: "125 min read"
         },
-        6: {
+        2: {
             author: "Amin Babar",
             title: "How to encourage students that suck",
             body: "lorem ipsum whatever I don't remember",
@@ -19,7 +19,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             tag: "happiness",
             length: "35 min read"
         },
-        1: {
+        3: {
             author: "Ben 'The Hosk' Hosking",
             title: "Agile Projects Have Become Waterfall Projects With Sprints",
             body: "lorem ipsum whatever I don't remember",
@@ -27,7 +27,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             tag: "water",
             length: "4 min read"
         },
-        2: {
+        4: {
             author: "Michael Shen",
             title: "Radiation is cool",
             body: "lorem ipsum whatever I don't remember",
@@ -35,7 +35,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             tag: "random",
             length: "64 min read"
         },
-        3: {
+        5: {
             author: "Louis Lane",
             title: "Supes ain't it",
             body: "lorem ipsum whatever I don't remember",
@@ -43,7 +43,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             tag: "superhero",
             length: "5 min read"
         },
-        4: {
+        6: {
             author: "Vivian Polonski",
             title: "I bought a plant",
             body: "lorem ipsum whatever I don't remember",
@@ -118,8 +118,8 @@ const Greeting = ({currentUser, logout, openModal}) =>{
             {/* WHATEVER BELOW THIS LINE WILL GO IN A DIFFERENT COMPONENT */}
 
             <main className="articles-container">
-                <div>
-                    <div className="for-you-menu-padding"></div>
+                <div className="for-you-menu-padding"></div>
+                <div >
                     <div className="for-you-menu">
                         <div className="for-you-item">
                             <a href="#">
@@ -196,7 +196,7 @@ const Greeting = ({currentUser, logout, openModal}) =>{
                     })}
                 </div>
             </main>
-            <aside>
+            <aside className="right-aside">
                 <div className="right-side-container">
                     <div className="right-inside-container">
                         <div className="membership-right-button">
@@ -211,7 +211,83 @@ const Greeting = ({currentUser, logout, openModal}) =>{
                             <input type="text" placeholder="Search"/>
                         </div>
                     </div>
+                    <div className="reading-today">
+                        <a href="#">
+                            <span></span>
+                            <h2>what we're reading today</h2>
+                        </a>
+                       { [1,2,3].map((num,idx)=>{
+                        return(
+                            <div key={idx} className="today-post">  
+                                <div>
+                                    <div className="today-author-pic">
+                                        <a href="#">
+                                            <img src={window.smallLinkedinLogo} />
+                                        </a>
+                                    </div>
+                                    <div className="today-author-name">
+                                        <a href="#">
+                                            {POSTMOCK[num].author}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="today-author-title">
+                                    <a href="#">
+                                        {POSTMOCK[num].title}
+                                    </a>
+                                </div>
+                            </div>
+                        )
+                       })}
+                    </div>
+                    <a href="#">See the full list</a>
+
+
+
+
+                    {/* This is the Recently Saved  */}
+                    <div className="reading-today">
+                        <a href="#">
+                            <h2>recently saved</h2>
+                        </a>
+                        {[1, 2, 3,4].map((num, idx) => {
+                            return (
+                                <div key={idx} className="today-post">
+                                    <div>
+                                        <div className="today-author-pic">
+                                            <a href="#">
+                                                <img src={window.smallLinkedinLogo} />
+                                            </a>
+                                        </div>
+                                        <div className="today-author-name">
+                                            <a href="#">
+                                                {POSTMOCK[num].author}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="today-author-title">
+                                        <a href="#">
+                                            {POSTMOCK[num].title}
+                                        </a>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <a href="#">See all({POSTMOCK.length})</a>
+                    <div className="right-side-footer">
+                        <div><a href="#">Help</a></div>
+                        <div><a href="#">Status</a></div>
+                        <div><a href="#">Writers</a></div>
+                        <div><a href="#">Blog</a></div>
+                        <div><a href="#">Careers</a></div>
+                        <div><a href="#">Privacy</a></div>
+                        <div><a href="#">Terms</a></div>
+                        <div><a href="#">About</a></div>
+                        <div><a href="#">Knowable</a></div>
+                    </div>
                 </div>
+                
             </aside>
         </div>
         </>

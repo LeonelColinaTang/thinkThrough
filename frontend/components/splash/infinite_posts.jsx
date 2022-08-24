@@ -2,7 +2,7 @@ import React from "react";
 
 const InfinitePosts = ({ currentUser }) => {
     const POSTMOCK = {
-        5: {
+        1: {
             author: "Kyle Ginzburg",
             title: "How not to kill your cohort",
             body: "lorem ipsum whatever I don't remember",
@@ -10,7 +10,7 @@ const InfinitePosts = ({ currentUser }) => {
             tag: "self-control",
             length: "125 min read"
         },
-        6: {
+        2: {
             author: "Amin Babar",
             title: "How to encourage students that suck",
             body: "lorem ipsum whatever I don't remember",
@@ -18,7 +18,7 @@ const InfinitePosts = ({ currentUser }) => {
             tag: "happiness",
             length: "35 min read"
         },
-        1: {
+        3: {
             author: "Ben 'The Hosk' Hosking",
             title: "Agile Projects Have Become Waterfall Projects With Sprints",
             body: "lorem ipsum whatever I don't remember",
@@ -26,7 +26,7 @@ const InfinitePosts = ({ currentUser }) => {
             tag: "water",
             length: "4 min read"
         },
-        2: {
+        4: {
             author: "Michael Shen",
             title: "Radiation is cool",
             body: "lorem ipsum whatever I don't remember",
@@ -34,7 +34,7 @@ const InfinitePosts = ({ currentUser }) => {
             tag: "random",
             length: "64 min read"
         },
-        3: {
+        5: {
             author: "Louis Lane",
             title: "Supes ain't it",
             body: "lorem ipsum whatever I don't remember",
@@ -42,7 +42,7 @@ const InfinitePosts = ({ currentUser }) => {
             tag: "superhero",
             length: "5 min read"
         },
-        4: {
+        6: {
             author: "Vivian Polonski",
             title: "I bought a plant",
             body: "lorem ipsum whatever I don't remember",

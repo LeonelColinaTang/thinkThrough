@@ -8,7 +8,8 @@ class SessionForm extends React.Component{
             email: '',
             password: ''
         };
-        this. handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
@@ -20,6 +21,11 @@ class SessionForm extends React.Component{
         e.preventDefault();
         const user = Object.assign({}, this.state)
         this.props.processForm(user).then(this.props.closeModal);
+    }
+
+    demoLogin(e){
+        e.preventDefault();
+        this.props.processForm({email:'demo', password:'demodemo'}).then(this.props.closeModal)
     }
 
     renderErrors() {
@@ -51,6 +57,7 @@ class SessionForm extends React.Component{
                         <input type="password" value={this.state.password} onChange={this.update('password')} className="login-input" />
                         <br />
                         <input className="form-submit" type="submit" value={this.props.formType} />
+                        {this.props.formType==="login" ? <input className="demo" type="submit" value="Demo Login" id="demo" onClick={this.demoLogin}/> : null}
                     </div>
                     <div className="other-form">
                         Please {this.props.formType} or {this.props.otherForm}

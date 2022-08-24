@@ -9,6 +9,7 @@
 }
 
 .modal-child {
+    font-family: sone;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,7 +43,7 @@
     width: 70%;
 }
 
-.form-submit{
+.form-submit, #demo{
     display: block;
     text-align: center;
     margin: auto;
@@ -51,6 +52,10 @@
     border: 1px solid black;
     border-radius: 20px;
     height: 30px;
+}
+
+#demo{
+    margin-top: 20px;
 }
 
 .login-form label{

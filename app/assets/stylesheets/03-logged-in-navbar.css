@@ -2,6 +2,8 @@
     background: rgba(255,255,255,1);
     display: flex;
     justify-content: space-between;
+    max-width: 1500px;
+    margin: auto;
 }
 .buttons-container{
     height: 100vh;

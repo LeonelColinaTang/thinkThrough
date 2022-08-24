@@ -1,8 +1,10 @@
+.right-aside{
+    border-left: 1px solid rgba(230, 230, 230, 1);
+}
 .right-side-container{
     min-height: 100vh;
     width: 330px;
     padding: 0 32px;
-    border-left: 1px solid rgba(230,230,230,1);
     font-family: sone;
 }
 .right-inside-container{
@@ -37,7 +39,7 @@
     height: 38px;
     text-align: center;
     border-radius: 30px;
-    border: 1px solid rgba(41, 41, 41, 1);
+    border: 1px solid rgba(230, 230, 230, 1);
 }
 .search-flex-container input{
     width: 100%;
@@ -45,10 +47,104 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+.search-flex-container input:focus-visible{
+    outline: none;
+}
+
+
 
 .search-flex-container span{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 7px 7px 6px 8px;
+}
+/* .reading-today{
+    margin-bottom: 22px;
+} */
+
+.reading-today a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+.reading-today > a:first-child{
+    margin-bottom: 22px;
+}
+.reading-today a span{
+    border-radius: 50%;
+    width: 8px;
+    background-color: rgb(26, 137, 23);
+    height: 8px;
+    margin-right: 8px;
+}
+.reading-today a h2 {
+    font-size: 16px;
+    font-family: sone;
+    letter-spacing: 0;
+    color: rgba(41,41,41,1);
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.today-post{
+    padding-bottom: 20px;
+}
+
+.today-post div:first-child{
+    display: flex;
+    /* margin-bottom: 8px; */
+}
+.today-author-pic a img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.today-author-pic a {
+    display: flex;
+}
+
+.today-author-name a{
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(41, 41, 41, 1);
+}
+
+.today-author-title a{
+    font-size: 16px;
+    color: rgba(41, 41, 41, 1);
+    letter-spacing: 0;
+    line-height: 20px;
+    font-family: sone-bold;
+}
+
+.right-side-container > a{
+    color: rgba(26, 137, 23, 1);
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.right-side-container > a:hover{
+    color: rgba(25, 25, 25, 1);;
+}
+
+.right-side-container  .reading-today{
+    margin-top: 30px;
+}
+
+.right-side-footer{
+    display: flex;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+
+.right-side-footer div a{
+    text-decoration: none;
+    font-size: 11px;
+    color: rgba(117, 117, 117, 1);
+    line-height: 16px;
+    margin-right: 8px;
 }
