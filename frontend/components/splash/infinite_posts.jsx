@@ -52,6 +52,8 @@ const InfinitePosts = ({ currentUser }) => {
         }
     }
 
+
+
     const infinitePosts = () => (
         <div className="outer-infinite-posts-container">
             <div className="inner-infinite-posts-container">

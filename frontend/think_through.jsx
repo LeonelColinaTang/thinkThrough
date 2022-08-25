@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+import {createOnePost, updateOnePost, deleteOnePost} from './actions/post_actions'
 
 document.addEventListener("DOMContentLoaded",()=>{
     let store;
@@ -19,6 +20,9 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
     window.getState = store.getState
+    window.createOnePost = createOnePost
+    window.updateOnePost = updateOnePost
+    window.deleteOnePost = deleteOnePost
 
 
     const root = document.getElementById('root');

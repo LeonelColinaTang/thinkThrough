@@ -1,20 +1,44 @@
 class Api::PostsController < ApplicationController
 
+    def index
+        @posts = Post.all
+        render :index
+    end
+    
+
+    def show
+        @post = Post.find(params[:id])
+        render :show 
+    end
+
     def create
         @post = Post.new(post_params)
         if @post.save
-          redirect_to @post #idk where to redirect here
+          render :show
         else 
           render json: @post.errors.full_messages, status: 422
         end
     end
 
+    def update
+        @post = Post.find(params[:id])
+        # debugger 
+        if @post && current_user.id == @post.user_id 
+           render :show if @post.update(post_params)
+        else
+          render json: @post.errors.full_messages, status: 422
+        end
+    end
+
+    def destroy
+        @post = Post.find(params[:id])
+        if @object.destroy
+            render :show
+        else
+            render json: @post.errors.full_messages, status: 422
+        end
+    end
     
-
-
-
-
-
 
     private 
      def post_params 
