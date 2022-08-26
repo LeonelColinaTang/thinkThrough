@@ -19,12 +19,38 @@ class SessionForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         const user = Object.assign({}, this.state)
-        this.props.processForm(user).then(this.props.closeModal);
+        this.props.processForm(user)
     }
 
     demoLogin(e){
         e.preventDefault();
-        this.props.processForm({email:'demo', password:'demodemo'}).then(this.props.closeModal)
+        const demo = {email: "demo", password:"demodemo"}
+        const speed = 100;
+
+        if(this.state.email !== demo.email){
+            const inputEmail = setInterval(() => {
+                if (this.state.email !== demo.email) {
+                    const temp = demo.email.slice(0, this.state.email.length + 1);
+                    this.setState({ email: temp })
+                } else {
+                    clearInterval(inputEmail);
+                    animatePW();
+                }
+            }, speed)
+        }
+        const animatePW = () => {
+            if (this.state.password !== demo.password) {
+                const inputPassword = setInterval(() => {
+                    if (this.state.password !== demo.password) {
+                        const temp = demo.password.slice(0, this.state.password.length + 1);
+                        this.setState({ password: temp });
+                    } else {
+                        clearInterval(inputPassword);
+                        this.props.processForm(demo)
+                    }
+                }, speed);
+            }
+        }
     }
 
     renderErrors() {

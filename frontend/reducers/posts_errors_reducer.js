@@ -1,13 +1,13 @@
 import { RECEIVE_ALL_POSTS, RECEIVE_ONE_POST, RECEIVE_POSTS_ERRORS } from "../actions/post_actions";
 
-export default (state=[], action) =>{
+export default (state={}, action) =>{
     Object.freeze(state);
 
     switch(action.type){
         case RECEIVE_ALL_POSTS:
-            return [];
+            return {};
         case RECEIVE_ONE_POST:
-            return [];
+            return {};
         case RECEIVE_POSTS_ERRORS:
             return action.errors;
         default:

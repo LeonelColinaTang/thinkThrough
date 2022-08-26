@@ -1,67 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import moment from 'moment';
 
-const InfinitePosts = ({ currentUser }) => {
-    const POSTMOCK = {
-        1: {
-            author: "Kyle Ginzburg",
-            title: "How not to kill your cohort",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 19",
-            tag: "self-control",
-            length: "125 min read"
-        },
-        2: {
-            author: "Amin Babar",
-            title: "How to encourage students that suck",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 19",
-            tag: "happiness",
-            length: "35 min read"
-        },
-        3: {
-            author: "Ben 'The Hosk' Hosking",
-            title: "Agile Projects Have Become Waterfall Projects With Sprints",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 17",
-            tag: "water",
-            length: "4 min read"
-        },
-        4: {
-            author: "Michael Shen",
-            title: "Radiation is cool",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Jul 17",
-            tag: "random",
-            length: "64 min read"
-        },
-        5: {
-            author: "Louis Lane",
-            title: "Supes ain't it",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Sep 4",
-            tag: "superhero",
-            length: "5 min read"
-        },
-        6: {
-            author: "Vivian Polonski",
-            title: "I bought a plant",
-            body: "lorem ipsum whatever I don't remember",
-            tag: "loneliness",
-            date: "May 7",
-            length: "4 min read"
-        }
+
+ class InfinitePosts extends React.Component {
+  
+    constructor(props){
+        super(props)
     }
 
+    componentDidMount() {
+        this.props.getAllPosts();
+    }
 
+    render(){
+        const {posts} = this.props;
 
-    const infinitePosts = () => (
-        <div className="outer-infinite-posts-container">
-            <div className="inner-infinite-posts-container">
-                <div className="infinite-posts-grid-container">
-                    <div className="infinite-posts-grid">
-                        <section className="infinite-posts">
-                            {/* ----------------------- */}
-                                {Object.values(POSTMOCK).map((post, idx) => {
+        return(
+            <div className="outer-infinite-posts-container">
+                <div className="inner-infinite-posts-container">
+                    <div className="infinite-posts-grid-container">
+                        <div className="infinite-posts-grid">
+                            <section className="infinite-posts">
+                                {Object.values(posts).map((post, idx) => {
                                     return (
                                         <div key={idx} className="infinite-post">
                                             <div className="post-info-container">
@@ -70,8 +31,8 @@ const InfinitePosts = ({ currentUser }) => {
                                                     <div className="post-left-info">
                                                         <div className="author-pic-name-container">
                                                             <div className="author-pic-name">
-                                                                <a href="#" className="author-small-pic"> 
-                                                                    <img src={window.smallLinkedinLogo} /> 
+                                                                <a href="#" className="author-small-pic">
+                                                                    <img src={window.smallLinkedinLogo} />
                                                                 </a>
                                                                 <div className="author-small-name">
                                                                     <a href="#" className="author-small-name-link">
@@ -79,18 +40,19 @@ const InfinitePosts = ({ currentUser }) => {
                                                                     </a>
                                                                 </div>
                                                             </div>
-                                                            <a href="#" className="title-description-link">
+                                                            {/* <a href="#" className="title-description-link"> */}
+                                                            <Link to={`/posts/${post.id}`} className="title-description-link">
                                                                 <h2 className="infinite-post-title">
                                                                     {post.title}
                                                                 </h2>
                                                                 <div className="infinite-post-description">
                                                                     <h3>{post.body}...</h3>
                                                                 </div>
-                                                            </a>
+                                                                {/* </a> */}</Link>
                                                         </div>
                                                         <div className="infinite-post-date-time-save-container">
                                                             <div className="infinite-post-date-time">
-                                                                <span>{post.date}</span>
+                                                                <span>{moment(post.created_at).format('MMMM D')}</span>
                                                                 <div><span>.</span></div>
                                                                 <span>{post.length}</span>
                                                             </div>
@@ -111,16 +73,16 @@ const InfinitePosts = ({ currentUser }) => {
                                         </div>
                                     )
                                 })}
-                            {/* ------------------------ */}
-                        </section>
-                        <aside className="tags-footer-container">
-                            <div className="side-container">
-                                <div className="discover-what-matters-container">
-                                    <div className="discover-title">
-                                        <p>discover more of what matters to you</p>
-                                    </div>
-                                    <div className="discover-interests">
-                                            {Object.values(POSTMOCK).map((post, idx) =>{
+                                {/* ------------------------ */}
+                            </section>
+                            <aside className="tags-footer-container">
+                                <div className="side-container">
+                                    <div className="discover-what-matters-container">
+                                        <div className="discover-title">
+                                            <p>discover more of what matters to you</p>
+                                        </div>
+                                        <div className="discover-interests">
+                                            {Object.values(posts).map((post, idx) => {
                                                 return (
                                                     <a href="#" key={idx} className="side-interest">
                                                         <div>
@@ -129,9 +91,9 @@ const InfinitePosts = ({ currentUser }) => {
                                                     </a>
                                                 )
                                             })}
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="side-footer-links">
+                                    <div className="side-footer-links">
                                         <div className="footer-link">
                                             <a href="#">
                                                 Help
@@ -177,20 +139,15 @@ const InfinitePosts = ({ currentUser }) => {
                                                 Knowable
                                             </a>
                                         </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </aside>
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
-
-    const emptyDiv = () => (
-        <>
-        </>
-    );
-    return (currentUser ? emptyDiv() : infinitePosts(currentUser));
+        )
+    }
 };
 
 export default InfinitePosts;

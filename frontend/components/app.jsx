@@ -5,55 +5,23 @@ import GreetingContainer from "./greeting/greeting_container";
 import LoginFormContainer from "./session_form/login_form_container";
 import SignupFormContainer from "./session_form/signup_form_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
-import SplashPageContainer from "./splash/splash_page_container";
-import TrendingPostContainer from "./splash/trending_posts_container";
-import InfinitePostsContainer from "./splash/infinite_posts_container";
+import MainSplashPage from "./splash/main_splash_page";
+import NotFound from "./not_found/not_found";
+import PostPageContainer from "./post/post_page_container";
 
 import Modal from './modal/modal';
-
 
 
 const App = () =>(
     <div>
         <Modal />
-        <header>
-            <GreetingContainer /> 
-        </header>
-            <SplashPageContainer />
-            <TrendingPostContainer />
-            <InfinitePostsContainer />
+        <Switch>
+            <Route exact path="/" component={GreetingContainer} />
+            <Route path="/posts/:id" component={PostPageContainer} />
+            <Route component={NotFound} />
+        </Switch>
     </div>
 );
 
 
 export default App;
-
-
-
-// const Main = () => {
-//     const mainRender = () => (
-//         <div>
-//             <NavBar />
-//             <ArticleIndex />
-//             <Footer />
-//         </div>
-//     );
-
-//     const rootRender = () => (
-//         <div>
-//             <NavBar />
-//             <Splash />
-//             <Footer />
-//         </div>
-//     );
-
-//     return (currentUser ? mainRender() : rootRender());
-// }
-
-// const NavBar = () => {
-//     if (currentUser) {
-//         return this;
-//     } else {
-//         return that;
-//     }
-// }
