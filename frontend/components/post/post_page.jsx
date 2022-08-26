@@ -27,15 +27,17 @@ class PostPage extends React.Component {
                         </div>
                         <div className="post-div-time">
                             <p>{moment(entirePost.created_at).format('MMMM D')}</p>
-                            <p>{entirePost.lenght}</p>
+                            <p>.</p>
+                            <p>{entirePost.length}</p>
                         </div>
                     </div>
                 </div>
-                <div className="entire-post-tile">
+                <div className="entire-post-title">
                     <h1>{entirePost.title}</h1>
                 </div>
                 <div className="post-big-image">
                     {/* here goes the image */}
+                    <img src={window.postPicture} />
                 </div>
                 <div className="entire-post-body">
                     <p>{entirePost.body}</p>

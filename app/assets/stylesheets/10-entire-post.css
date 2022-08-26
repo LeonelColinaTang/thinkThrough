@@ -5,3 +5,36 @@
     padding: 50px 0;
     height: 100vh;
 }
+
+.entire-post-title{
+    font-family: sone-bold;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.016em;
+    margin-top: 0.6em;
+    margin-bottom: 30px;
+    color: rgba(41,41,41,1);
+}
+
+.entire-post-body{
+    font-family: charter;
+    font-size: 20px;
+    margin-top: 2em;
+    letter-spacing: -0.003em;
+    line-height: 32px;
+}
+
+.post-big-image img{
+    width: 100%;
+}
+
+.post-div-time{
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(117,117,117,1);
+    display: flex;
+}
+
+.post-div-time p{
+    margin: 0 5px;
+}
