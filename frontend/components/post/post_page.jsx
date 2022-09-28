@@ -7,15 +7,11 @@ class PostPage extends React.Component {
         super(props)
     }
 
-
-
     render(){
 
         const {entirePost} = this.props
 
         return(
-            <> 
-
             <div className="post-page-div">
                 <div className="author-info-header">
                     <div className="author-avatar">
@@ -46,8 +42,6 @@ class PostPage extends React.Component {
                         <p>lorem ipsum whatever I don't remember Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae velit sunt a recusandae similique debitis ratione excepturi? Qui quae laudantium, deserunt inventore nostrum commodi, pariatur ut voluptas nam accusamus consequuntur dignissimos ipsum culpa voluptatum ratione ex praesentium hic odit rem deleniti dolores veniam! Ea maiores porro eos, at sequi labore consectetur, maxime non minima impedit assumenda fuga. Id, nostrum a?</p>
                 </div>
             </div>
-
-            </>
         )
     }
 

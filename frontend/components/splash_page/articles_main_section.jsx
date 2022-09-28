@@ -57,7 +57,6 @@ const ArticlesMainSection = () =>{
     return(
         <main className="articles-container">
             <ForYouMenu />
-
             <div className="posts-index-container">
                 {Object.values(POSTMOCK).map((post, idx) => {
                     return (

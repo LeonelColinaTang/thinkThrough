@@ -144,7 +144,6 @@ const AsideMainSection = () =>{
                     <div><a href="#">Knowable</a></div>
                 </div>
             </div>
-
         </aside>
     )
 }
