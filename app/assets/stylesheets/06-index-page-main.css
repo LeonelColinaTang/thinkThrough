@@ -55,7 +55,6 @@
     flex-direction: column;
     justify-content: space-around;
     margin: 0 20px;
-    /* border-bottom: 1px solid rgba(117, 117, 117, 1); */
 }
 .title-body-single-post-container{
     margin-top: -30px;

@@ -59,9 +59,6 @@
     justify-content: center;
     padding: 7px 7px 6px 8px;
 }
-/* .reading-today{
-    margin-bottom: 22px;
-} */
 
 .reading-today a{
     text-decoration: none;
@@ -95,7 +92,6 @@
 
 .today-post div:first-child{
     display: flex;
-    /* margin-bottom: 8px; */
 }
 .today-author-pic a img {
     width: 24px;

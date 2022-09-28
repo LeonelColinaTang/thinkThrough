@@ -101,7 +101,6 @@
 .infinite-post-date-time-save-container{
     display: flex;
     justify-content: space-between;
-    /* padding-top: 8px; */
     align-items: baseline;
     font-family: sone;
     color: rgba(117, 117, 117, 1);
