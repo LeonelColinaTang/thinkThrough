@@ -20,10 +20,12 @@ class PostPage extends React.Component {
                 <div className="author-info-header">
                     <div className="author-avatar">
                         {/* here goes the image of the person */}
+                            <img src={window.kyle} />
                     </div>
                     <div className="author-info">
                         <div className="author-name">
                             <h3>{entirePost.author}</h3>
+                            <h3>Kyle Ginzburg</h3>
                         </div>
                         <div className="post-div-time">
                             <p>{moment(entirePost.created_at).format('MMMM D')}</p>
@@ -41,6 +43,7 @@ class PostPage extends React.Component {
                 </div>
                 <div className="entire-post-body">
                     <p>{entirePost.body}</p>
+                        <p>lorem ipsum whatever I don't remember Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae velit sunt a recusandae similique debitis ratione excepturi? Qui quae laudantium, deserunt inventore nostrum commodi, pariatur ut voluptas nam accusamus consequuntur dignissimos ipsum culpa voluptatum ratione ex praesentium hic odit rem deleniti dolores veniam! Ea maiores porro eos, at sequi labore consectetur, maxime non minima impedit assumenda fuga. Id, nostrum a?</p>
                 </div>
             </div>
 

@@ -22,6 +22,7 @@
     margin-top: 2em;
     letter-spacing: -0.003em;
     line-height: 32px;
+    margin-bottom: 30px;
 }
 
 .post-big-image img{
@@ -37,4 +38,11 @@
 
 .post-div-time p{
     margin: 0 5px;
+}
+
+.author-avatar img{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
