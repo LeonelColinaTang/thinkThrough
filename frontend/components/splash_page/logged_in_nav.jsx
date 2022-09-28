@@ -7,13 +7,7 @@ import { logoutUser } from "../../actions/session_actions";
 const LoggedInNav = () =>{
 
     const dispatch = useDispatch();
-
-
-
-    const handleLogout = () =>{
-        dispatch(logoutUser())
-    }
-
+    
     return(
 
         <nav className="logged-in-nav">
@@ -54,7 +48,7 @@ const LoggedInNav = () =>{
                 <div className="navbar-profile-pic">
                     <a href="#" className="navbar-profile-link">
                         <img src={window.smallGithubLogo} />
-                        <button className="header-button" onClick={handleLogout}>Log Out</button>
+                        <button className="header-button" onClick={()=>dispatch(logoutUser())}>Log Out</button>
                     </a>
                 </div>
             </div>
