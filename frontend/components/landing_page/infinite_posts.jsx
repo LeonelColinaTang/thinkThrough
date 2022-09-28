@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from 'moment';
 
-
  class InfinitePosts extends React.Component {
   
     constructor(props){
@@ -26,7 +25,6 @@ import moment from 'moment';
                                     return (
                                         <div key={idx} className="infinite-post">
                                             <div className="post-info-container">
-
                                                 <div className="post-pic-container">
                                                     <div className="post-left-info">
                                                         <div className="author-pic-name-container">
@@ -62,7 +60,6 @@ import moment from 'moment';
                                                                 </svg>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                     <a href="#" className="post-right-pic">
                                                         <img src={window.smallLinkedinLogo} />
