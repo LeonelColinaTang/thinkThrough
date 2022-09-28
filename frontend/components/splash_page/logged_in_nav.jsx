@@ -3,10 +3,6 @@ import { useDispatch } from "react-redux";
 
 import { logoutUser } from "../../actions/session_actions";
 
-import ArticlesMainSection from "../greeting/articles_main_section";
-import AsideMainSection from "./aside_main_section";
-
-
 
 const LoggedInNav = () =>{
 

@@ -29,7 +29,6 @@ const ForYouMenu = () => (
             </div>
         </div>
     </>
-
 )
 
 export default ForYouMenu;
