@@ -9,7 +9,7 @@ class PostPage extends React.Component {
 
     render(){
 
-        const {entirePost} = this.props
+        const {entirePost} = this.props;
 
         return(
             <div className="post-page-div">
