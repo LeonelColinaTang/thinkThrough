@@ -2,22 +2,15 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { getAllPosts } from "../../actions/post_actions";
+import { Link } from "react-router-dom";
 
 
 const trendingPosts = () => {
 
-
-    useEffect(() =>{
-        getAllPosts()
-    },[])
-
-
     const allPosts = useSelector((state) => {
         return Object.values(state.entities.posts)
     });
-    
-    console.log("ALL POSTS",allPosts)
-    
+
     return(
         <div className="main-trending-container">
             <div className="trending-container">
@@ -38,7 +31,7 @@ const trendingPosts = () => {
                                 <a href="#">{post.author}</a>
                             </div>
                             <div className="title-trending-post">
-                                <a href="#">{post.title}</a>
+                                <Link to={`/posts/${post.id}`}>{post.title}</Link>
                             </div>
                             <div className="time-info-trending-post">
                                 <div>{post.date}</div>

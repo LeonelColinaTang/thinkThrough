@@ -12,9 +12,9 @@ const App = () =>(
     <div>
         <Modal />
         <Switch>
-            {/* <Route path="/posts/:id" component={PostPageContainer} />*/}
             <AuthRoute exact path="/" component={LandingPage} />
             <ProtectedRoute exact path="/profile" component={Splash} />
+            <Route exact path="/posts/:postId" component={PostPageContainer} />
             <Route component={NotFound} />
         </Switch>
     </div>

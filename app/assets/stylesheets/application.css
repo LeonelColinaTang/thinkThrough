@@ -50,13 +50,6 @@
 }
 
 @font-face {
-    font-family: 'sone';
-    src: url('Sohne-Halbfett.woff2');
-    font-weight: bolder;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'gtsupermedium';
     src: url('GT-Super-Display-Medium');
     font-weight: medium;

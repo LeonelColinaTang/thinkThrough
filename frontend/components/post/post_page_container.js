@@ -3,26 +3,17 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import PostPage from "./post_page";
 
-import { fetchOnePost } from "../../util/posts_api_util";
-
-
+import { getOnePost } from "../../actions/post_actions";
 
 const mapStateToProps = (state, {match}) =>{
-    
-    let postId = parseInt(match.params.id);
-    let entirePost = state.entities.posts[match.params.id]
-    console.log(state.entities.posts)
-    console.log(entirePost)
-
     return{
-        postId: postId,
-        entirePost
+        postId: parseInt(match.params.postId),
     }
 };
 
 const mapDispatchToProps = (dispatch) =>({
 
-    fetchOnePost: (postId) => dispatch(fetchOnePost(postId))
+    getOnePost: (postId) => dispatch(getOnePost(postId))
 
 });
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PostPage))

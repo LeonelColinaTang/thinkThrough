@@ -1,57 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const AsideMainSection = () =>{
 
-    const POSTMOCK = {
-        1: {
-            author: "Kyle Ginzburg",
-            title: "How not to kill your cohort",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 19",
-            tag: "self-control",
-            length: "125 min read"
-        },
-        2: {
-            author: "Amin Babar",
-            title: "How to encourage students that suck",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 19",
-            tag: "happiness",
-            length: "35 min read"
-        },
-        3: {
-            author: "Ben 'The Hosk' Hosking",
-            title: "Agile Projects Have Become Waterfall Projects With Sprints",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Aug 17",
-            tag: "water",
-            length: "4 min read"
-        },
-        4: {
-            author: "Michael Shen",
-            title: "Radiation is cool",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Jul 17",
-            tag: "random",
-            length: "64 min read"
-        },
-        5: {
-            author: "Louis Lane",
-            title: "Supes ain't it",
-            body: "lorem ipsum whatever I don't remember",
-            date: "Sep 4",
-            tag: "superhero",
-            length: "5 min read"
-        },
-        6: {
-            author: "Vivian Polonski",
-            title: "I bought a plant",
-            body: "lorem ipsum whatever I don't remember",
-            tag: "loneliness",
-            date: "May 7",
-            length: "4 min read"
-        }
-    }
+
+    const readingToday = useSelector((state)=>{
+        return Object.values(state.entities.posts)
+    })
 
     return(
         <aside className="right-aside">
@@ -74,7 +29,7 @@ const AsideMainSection = () =>{
                         <span></span>
                         <h2>what we're reading today</h2>
                     </a>
-                    {[1, 2, 3].map((num, idx) => {
+                    {readingToday.slice(0,3).map((post, idx) => {
                         return (
                             <div key={idx} className="today-post">
                                 <div>
@@ -85,13 +40,13 @@ const AsideMainSection = () =>{
                                     </div>
                                     <div className="today-author-name">
                                         <a href="#">
-                                            {POSTMOCK[num].author}
+                                            {post.author}
                                         </a>
                                     </div>
                                 </div>
                                 <div className="today-author-title">
                                     <a href="#">
-                                        {POSTMOCK[num].title}
+                                        {post.title}
                                     </a>
                                 </div>
                             </div>
@@ -107,7 +62,7 @@ const AsideMainSection = () =>{
                     <a href="#">
                         <h2>recently saved</h2>
                     </a>
-                    {[1, 2, 3, 4].map((num, idx) => {
+                    {readingToday.slice(0,4).map((post, idx) => {
                         return (
                             <div key={idx} className="today-post">
                                 <div>
@@ -118,20 +73,20 @@ const AsideMainSection = () =>{
                                     </div>
                                     <div className="today-author-name">
                                         <a href="#">
-                                            {POSTMOCK[num].author}
+                                            {post.author}
                                         </a>
                                     </div>
                                 </div>
                                 <div className="today-author-title">
                                     <a href="#">
-                                        {POSTMOCK[num].title}
+                                        {post.title}
                                     </a>
                                 </div>
                             </div>
                         )
                     })}
                 </div>
-                <a href="#">See all ({Object.values(POSTMOCK).length})</a>
+                <a href="#">See all ({readingToday.length})</a>
                 <div className="right-side-footer">
                     <div><a href="#">Help</a></div>
                     <div><a href="#">Status</a></div>

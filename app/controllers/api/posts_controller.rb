@@ -7,7 +7,8 @@ class Api::PostsController < ApplicationController
     
 
     def show
-        @post = Post.find(params[:id])
+        # debugger
+        @post = Post.find(params[:id].to_i)
         render :show 
     end
 
@@ -22,7 +23,6 @@ class Api::PostsController < ApplicationController
 
     def update
         @post = Post.find(params[:id])
-        # debugger 
         if @post && current_user.id == @post.user_id 
            render :show if @post.update(post_params)
         else
