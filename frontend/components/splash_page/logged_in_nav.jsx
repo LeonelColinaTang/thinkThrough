@@ -1,12 +1,15 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { logoutUser } from "../../actions/session_actions";
 
 
 const LoggedInNav = () =>{
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); 
+    const currentUser = useSelector((state)=>{
+        
+    })
     
     return(
 
