@@ -8,10 +8,13 @@
 }
 .create-navbar button{
     height: 25px;
-    background: green;
+    font-size: 13px;
+    background: #1a8917;
     color: white;
-    border: 1px solid green;
+    border: 1px solid #1a8917;
     border-radius: 15px;
+    line-height: 25px;
+    padding: 0 6px;
 }
 
 .create-editor-container{
@@ -23,4 +26,22 @@
 .post-field{
     padding: 15px;
     width: 80%;
+    margin: 10px;
+    font-family: serif;
+    color: rgba(0, 0, 0, .84);
+    border: none;
+    outline: none;
+    caret-color: #b3b3b1;
+}
+
+.post-field::placeholder{
+    color: #b3b3b1;
+}
+.create-editor-container input{
+    font-size: 40px;
+}
+
+.create-editor-container textarea{
+    font-size: 18px;
+    resize: none;
 }
