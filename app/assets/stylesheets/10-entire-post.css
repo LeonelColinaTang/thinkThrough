@@ -1,9 +1,19 @@
+.post-main-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logged-in-nav{
+    position: sticky;
+    top: 0;
+}
+
 .post-page-div{
     font-family: sone;
     width: 70%;
     margin: auto;
     padding: 50px 0;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .entire-post-title{

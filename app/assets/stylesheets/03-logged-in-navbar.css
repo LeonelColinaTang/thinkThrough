@@ -3,12 +3,12 @@
     display: flex;
     justify-content: space-between;
     max-width: 1500px;
-    margin: auto;
+    /* margin: auto; */
 }
-.logged-in-nav{
+/* .logged-in-nav{
     position: sticky;
     top: 0;
-}
+} */
 .buttons-container{
     height: 100vh;
     width: 80px;
