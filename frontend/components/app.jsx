@@ -6,6 +6,7 @@ import PostPageContainer from "./post/post_page_container";
 import LandingPage from "./landing_page/landing_page";
 import Splash from "./splash_page/splash";
 import Modal from './session_form/modal';
+import WritingPostPage from "./post/create_post";
 
 
 const App = () =>(
@@ -14,6 +15,7 @@ const App = () =>(
         <Switch>
             <AuthRoute exact path="/" component={LandingPage} />
             <ProtectedRoute exact path="/profile" component={Splash} />
+            <ProtectedRoute exact path="/newPost" component={WritingPostPage} />
             <Route exact path="/posts/:postId" component={PostPageContainer} />
             <Route component={NotFound} />
         </Switch>

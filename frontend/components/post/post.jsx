@@ -5,7 +5,7 @@ import moment from 'moment';
 const Post = ({post}) =>{
 
 
-
+console.log("POOST",post)
     return(
         <div className="post-page-div">
             <div className="author-info-header">
@@ -14,8 +14,7 @@ const Post = ({post}) =>{
                 </div>
                 <div className="author-info">
                     <div className="author-name">
-                        {/* <h3>{entirePost.author}</h3> */}
-                        <h3>Kyle Ginzburg</h3>
+                        <h3>{post.author}</h3>
                     </div>
                     <div className="post-div-time">
                         <p>{moment(post.created_at).format('MMMM D')}</p>

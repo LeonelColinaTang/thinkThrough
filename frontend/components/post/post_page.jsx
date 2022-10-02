@@ -1,7 +1,7 @@
 import React from "react";
-import moment from 'moment';
 import Post from "./post";
 import LoggedInNav from "../splash_page/logged_in_nav";
+import AsideMainSection from "../splash_page/aside_main_section";
 
 
 class PostPage extends React.Component {
@@ -15,30 +15,22 @@ class PostPage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getOnePost(this.props.postId);
+        this.props.getOnePost(this.props.postId)
+            .then((post) => {
+                this.setState({ post: post.post })
+            });
     }
-
-
-    componentWillMount() {
-        this.props.getOnePost(this.props.postId);
-    }
-    
-    componentWillReceiveProps(newState) {
-        console.log("NEW STATE",newState)
-        this.setState({ book: newState.entities.posts });
-       
-    }
-    
 
 
     render(){
 
         const {post} = this.state;
-        console.log(post)
+        console.log("POST",post)
         return(
-            <div>
+            <div className="post-main-container">
                 <LoggedInNav />
                 <Post post={post} />
+                <AsideMainSection />
             </div>
             
 
