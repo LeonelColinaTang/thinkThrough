@@ -29,7 +29,6 @@ class PostPage extends React.Component {
             <div className="post-main-container">
                 <LoggedInNav />
                 <Post post={post} />
-                {/* <AsideMainSection /> */}
                 <AsidePost/>
             </div>
         )

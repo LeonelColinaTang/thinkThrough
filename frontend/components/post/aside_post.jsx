@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+
+
 const AsidePost = () => {
 
 
@@ -8,7 +10,7 @@ const AsidePost = () => {
         return Object.values(state.entities.posts)
     })
 
-    const author = useSelector((state) => Object.values(state.entities.users))
+    const author = useSelector((state) => state.entities.posts)
     console.log("ASIDE AUTHOR", author)
     return (
         <aside className="right-aside">
@@ -32,7 +34,7 @@ const AsidePost = () => {
                         <img src={window.kyle} />
                     </div>
                     <div className="post-author-name">
-
+                        {author.author}
                     </div>
                     <div className="post-author-followers">
 
@@ -71,7 +73,6 @@ const AsidePost = () => {
                         )
                     })}
                 </div>
-                <a href="#">See all ({readingToday.length})</a>
                 <div className="right-side-footer">
                     <div><a href="#">Help</a></div>
                     <div><a href="#">Status</a></div>
