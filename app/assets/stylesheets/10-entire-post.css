@@ -72,7 +72,8 @@
     display: flex;
 }
 
-.post-likes-button, .post-comments-button{
+.post-likes-button, 
+.post-comments-button{
     display: flex;
     justify-content: flex-start;
     align-items: center;
