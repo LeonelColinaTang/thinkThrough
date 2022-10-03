@@ -31,8 +31,6 @@ class PostPage extends React.Component {
                 <Post post={post} />
                 <AsideMainSection />
             </div>
-            
-
         )
     }
 
