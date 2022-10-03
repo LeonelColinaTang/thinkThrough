@@ -7,11 +7,10 @@ import { logoutUser } from "../../actions/session_actions";
 
 
 const LoggedInNav = () =>{
+    
     const history = useHistory();
     const dispatch = useDispatch(); 
     const currentUser = Boolean(useSelector((state)=> state.session.id))
-    console.log("CURRENT",currentUser)
-
 
     const handleNotifications = () =>{
         if (!currentUser){

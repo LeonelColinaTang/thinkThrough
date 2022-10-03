@@ -14,6 +14,7 @@ const WritingPostPage = () =>{
     const history = useHistory();
     const dispatch = useDispatch();
     const user = useSelector((state) => state.entities.users[state.session.id])
+ 
     const [text, setText]= useState('');
     const [title, setTitle] = useState('');
 
@@ -24,7 +25,6 @@ const WritingPostPage = () =>{
             body: text,
             user_id: user.id,
         }))
-
         history.push('/profile')
     }
 
@@ -59,7 +59,6 @@ const WritingPostPage = () =>{
                 options={{ toolbar: { buttons: ['bold', 'italic', 'underline'] } }}
                 /> */}
             </div>
-
         </div>
     )
 

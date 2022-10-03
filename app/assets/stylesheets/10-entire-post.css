@@ -12,8 +12,7 @@
     font-family: sone;
     width: 70%;
     margin: auto;
-    padding: 50px 0;
-    /* height: 100vh; */
+    padding: 50px;
 }
 
 .entire-post-title{
@@ -25,7 +24,14 @@
     margin-bottom: 30px;
     color: rgba(41,41,41,1);
 }
-
+.author-info-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.author-info-header > div{
+    margin-right: 15px;
+}
 .entire-post-body{
     font-family: charter;
     font-size: 20px;
@@ -55,4 +61,24 @@
     height: 48px;
     margin-bottom: 10px;
     border-radius: 50%;
+}
+
+.post-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-like-comments, .post-save-delete{
+    display: flex;
+}
+
+.post-likes-button, .post-comments-button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.post-like-comments > div,
+.post-save-delete > div{
+    margin: 5px;
 }

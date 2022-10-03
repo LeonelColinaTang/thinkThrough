@@ -25,7 +25,6 @@ class PostPage extends React.Component {
     render(){
 
         const {post} = this.state;
-        console.log("POST",post)
         return(
             <div className="post-main-container">
                 <LoggedInNav />

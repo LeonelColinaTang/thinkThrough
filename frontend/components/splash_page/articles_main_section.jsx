@@ -3,6 +3,7 @@ import ForYouMenu from "./foryou_menu";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPosts } from "../../actions/post_actions";
+import { Link } from "react-router-dom";
 const ArticlesMainSection = () =>{
 
 
@@ -43,14 +44,14 @@ const ArticlesMainSection = () =>{
                                     </div>
                                 </div>
                                 <div className="title-body-single-post-container">
-                                    <a href="#">
+                                    <Link to={`/posts/${post.id}`} >
                                         <div className="single-post-title">
                                             {post.title}
                                         </div>
                                         <div className="single-post-body">
                                             {post.body}
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="time-save-container">
                                     <div >
