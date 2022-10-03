@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 const WritingPostPage = () =>{
 
     // let editorr = new MediumEditor('.something')
+    
     const history = useHistory();
     const dispatch = useDispatch();
     const user = useSelector((state) => state.entities.users[state.session.id])
