@@ -39,21 +39,35 @@ const WritingPostPage = () =>{
                 <button onClick={handleCreatePost}><span>Publish</span></button>
             </div>
             <div className="create-editor-container">
-                <input 
+                <div className="post-field">
+                    < Editor
+                        text={title}
+                        onChange={(e)=> setTitle(e.target.value)}
+                        options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
+                    />
+                </div>
+                {/* <input 
                     type="text" 
                     value={title} 
                     onChange={(e)=> setTitle(e.target.value)} 
                     placeholder="Title"
                     className="post-field"
-                />
-                <textarea 
+                /> */}
+                {/* <textarea 
                     className="post-field" 
                     placeholder="Tell your story..." 
                     value={text} 
                     onChange={(e) => setText(e.target.value)}
                     rows="5"
                     cols="60"
-                /> 
+                />  */}
+                <div className="post-field">
+                    < Editor
+                        text={text}
+                        onChange={(e)=> setText(e.target.value)}
+                        options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
+                    />
+                </div>
                 {/* < Editor
                 text={text}
                 onChange={(e)=> setText(e.target.value)}
