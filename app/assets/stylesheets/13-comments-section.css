@@ -1,0 +1,7 @@
+.comments-side{
+    position: fixed;
+    background: green;
+    right: 0px;
+    min-height: 100vh;
+    width: 400px;
+}
