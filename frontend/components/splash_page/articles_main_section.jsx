@@ -20,9 +20,8 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
     const allPosts = useSelector((state) => {
         if (filtered){
             return Object.values(state.entities.posts).filter(post => post.user_id === state.session.id)
-        }else{
-            return Object.values(state.entities.posts)
         }
+        return Object.values(state.entities.posts)
         
     });
     window.allPosts = allPosts
