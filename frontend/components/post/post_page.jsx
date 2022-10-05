@@ -1,7 +1,6 @@
 import React from "react";
 import Post from "./post";
 import LoggedInNav from "../splash_page/logged_in_nav";
-// import AsideMainSection from "../splash_page/aside_main_section";
 import AsidePost from "./aside_post";
 
 class PostPage extends React.Component {
