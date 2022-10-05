@@ -11,7 +11,6 @@ const AsidePost = () => {
     })
 
     const author = useSelector((state) => state.entities.posts)
-    console.log("ASIDE AUTHOR", author)
     return (
         <aside className="right-aside">
             <div className="right-side-container">

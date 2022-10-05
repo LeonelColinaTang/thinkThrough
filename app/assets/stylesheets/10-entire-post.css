@@ -84,3 +84,10 @@
 .post-save-delete > div{
     margin: 5px;
 }
+
+.post-likes-button,
+.post-comments-button,
+.post-save,
+.post-delete{
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 require('medium-editor/dist/css/medium-editor.css');
-require('medium-editor/dist/css/themes/default.css');
+require('medium-editor/dist/css/themes/mani.css');
 import Editor from 'react-medium-editor';
 import { useSelector, useDispatch } from "react-redux";
 import { createOnePost } from "../../actions/post_actions";
@@ -40,15 +40,21 @@ const WritingPostPage = () =>{
                 <div className="post-field">
                     < Editor
                         text={title}
-                        onChange={(e)=> setTitle(e.target.value)}
-                        options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
+                        onChange={(e, medium) => setTitle(medium.origElements.innerText)}
+                        options={{ 
+                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
+                            placeholder: { text: 'Title'}
+                         }}
                     />
                 </div>
                 <div className="post-field">
                     < Editor
                         text={text}
-                        onChange={(e)=> setText(e.target.value)}
-                        options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
+                        onChange={(e, medium) => setText(medium.origElements.innerText)}
+                        options={{ 
+                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
+                            placeholder: { text: 'Tell your story...'} 
+                        }}
                     />
                 </div>
             </div>

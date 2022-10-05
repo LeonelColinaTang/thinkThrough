@@ -33,7 +33,9 @@ const LoggedInNav = ({ filtered, setFiltered }) =>{
             dispatch(openModal('signup'))
         }else{
             //Might need to create a different page. setFiltered giving issues in other components.
-            setFiltered(true)
+            if (setFiltered) { setFiltered(true) }
+            
+            history.push('/profile')
         }
     }
 
