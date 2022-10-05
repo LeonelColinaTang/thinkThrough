@@ -9,8 +9,6 @@ import { useHistory } from "react-router-dom";
 
 
 const WritingPostPage = () =>{
-
-    // let editorr = new MediumEditor('.something')
     
     const history = useHistory();
     const dispatch = useDispatch();
@@ -46,21 +44,6 @@ const WritingPostPage = () =>{
                         options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
                     />
                 </div>
-                {/* <input 
-                    type="text" 
-                    value={title} 
-                    onChange={(e)=> setTitle(e.target.value)} 
-                    placeholder="Title"
-                    className="post-field"
-                /> */}
-                {/* <textarea 
-                    className="post-field" 
-                    placeholder="Tell your story..." 
-                    value={text} 
-                    onChange={(e) => setText(e.target.value)}
-                    rows="5"
-                    cols="60"
-                />  */}
                 <div className="post-field">
                     < Editor
                         text={text}
@@ -68,11 +51,6 @@ const WritingPostPage = () =>{
                         options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
                     />
                 </div>
-                {/* < Editor
-                text={text}
-                onChange={(e)=> setText(e.target.value)}
-                    options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
-                /> */}
             </div>
         </div>
     )
