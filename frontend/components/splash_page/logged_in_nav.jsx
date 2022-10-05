@@ -34,7 +34,6 @@ const LoggedInNav = ({ filtered, setFiltered }) =>{
         }else{
             //Might need to create a different page. setFiltered giving issues in other components.
             setFiltered(true)
-            console.log(filtered)
         }
     }
 
