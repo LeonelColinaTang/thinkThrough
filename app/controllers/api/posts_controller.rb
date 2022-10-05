@@ -1,13 +1,13 @@
 class Api::PostsController < ApplicationController
 
     def index
+        # debugger
         @posts = Post.all.includes(:user)
         render :index
     end
     
 
     def show
-        # debugger
         @post = Post.find(params[:id].to_i)
         render :show 
     end

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// require('medium-editor/dist/css/medium-editor.css');
-// require('medium-editor/dist/css/themes/default.css');
+require('medium-editor/dist/css/medium-editor.css');
+require('medium-editor/dist/css/themes/default.css');
 import Editor from 'react-medium-editor';
 import { useSelector, useDispatch } from "react-redux";
 import { createOnePost } from "../../actions/post_actions";
@@ -53,11 +53,11 @@ const WritingPostPage = () =>{
                     onChange={(e) => setText(e.target.value)}
                     rows="5"
                     cols="60"
-                />
-                {/* <Editor 
+                /> 
+                {/* < Editor
                 text={text}
                 onChange={(e)=> setText(e.target.value)}
-                options={{ toolbar: { buttons: ['bold', 'italic', 'underline'] } }}
+                    options={{ toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] } }}
                 /> */}
             </div>
         </div>

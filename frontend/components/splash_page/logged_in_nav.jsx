@@ -6,8 +6,10 @@ import { openModal } from "../../actions/modal_actions";
 import { logoutUser } from "../../actions/session_actions";
 
 
-const LoggedInNav = () =>{
+const LoggedInNav = ({ filtered, setFiltered }) =>{
+
     
+
     const history = useHistory();
     const dispatch = useDispatch(); 
     const currentUser = Boolean(useSelector((state)=> state.session.id))
@@ -29,6 +31,9 @@ const LoggedInNav = () =>{
     const handleStories = () => {
         if (!currentUser) {
             dispatch(openModal('signup'))
+        }else{
+            setFiltered(true)
+            console.log(filtered)
         }
     }
 

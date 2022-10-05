@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllPosts } from "../../actions/post_actions";
 import { Link } from "react-router-dom";
-const ArticlesMainSection = () =>{
+
+
+const ArticlesMainSection = ({filtered, setFiltered}) =>{
 
 
     const dispatch = useDispatch();
@@ -16,10 +18,15 @@ const ArticlesMainSection = () =>{
 
 
     const allPosts = useSelector((state) => {
-        return Object.values(state.entities.posts)
+        if (filtered){
+            return Object.values(state.entities.posts).filter(post => post.user_id === state.session.id)
+        }else{
+            return Object.values(state.entities.posts)
+        }
+        
     });
-
-
+    window.allPosts = allPosts
+    console.log(allPosts)
     return(
         <main className="articles-container">
             <ForYouMenu />
