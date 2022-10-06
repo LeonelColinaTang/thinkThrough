@@ -1,7 +1,70 @@
+.comments-modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.08);
+}
+
 .comments-side{
     position: fixed;
-    background: green;
+    background: white;
     right: 0px;
     min-height: 100vh;
-    width: 400px;
+    width: 414px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 4px 12px;
+}
+.response-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+.comments-side h2{
+    font-size: 20px;
+    color: rgba(41, 41, 41, 1);
+    line-height: 24px;
+    font-weight: bolder;
+    font-family: sone;
+}
+
+.close-responses{
+    cursor: pointer;
+}
+
+.comment-div{
+    padding: 15px;
+    margin: 10px 0px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.comment-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.comment-name-pic{
+    display: flex;
+    align-items: center;
+}
+.comment-name{
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+.comment-pic img{
+    width: 32px;
+    border-radius: 50%;;
+}
+
+.create-comment-section{
+    padding: 0 24px;
+}
+.comment-box{
+    /* padding: 0 24px; */
+}
+.comment-box textarea{
+    width: 100%;
+    border: none;
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 8px;
+    resize: none;
+    outline: none;
 }

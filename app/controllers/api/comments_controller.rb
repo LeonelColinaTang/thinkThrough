@@ -1,7 +1,7 @@
 class Api::CommentsController < ApplicationController
 
     def index
-        @comments = Comment.all
+        @comments = Comment.all.includes(:commenter)
         render :index
     end
 
@@ -14,7 +14,7 @@ class Api::CommentsController < ApplicationController
         end
     end
 
-     def update
+     def update 
         @comment = Comment.find(params[:id])
         if @comment && current_user.id == @comment.user_id 
            render :show if @comment.update(comment_params)

@@ -85,7 +85,10 @@ const Post = ({post}) =>{
                     </div>
                 </div>
             </div>
-            {comments && <Comments post={post}/>}
+            {comments && 
+                <div className="comments-modal" onClick={e=>setComments(!comments)}>
+                    <Comments post={post} setComments={setComments} />
+                </div>}
             
         </>
      
