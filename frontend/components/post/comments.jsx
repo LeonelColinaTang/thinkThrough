@@ -6,7 +6,7 @@ import CommentOptions from "./comment-options";
 const Comments = ({post, setComments}) =>{
 
     const dispatch = useDispatch();
-
+    const user = useSelector(state => state.session.id)
     const allComments = useSelector((state)=> Object.values(state.entities.comments));
 
     const [body, setBody] = useState('');
@@ -19,7 +19,7 @@ const Comments = ({post, setComments}) =>{
         if (buttonType ==='Respond'){
             dispatch(createOneComment({
                 body: body,
-                user_id: post.user_id,
+                user_id: user,
                 post_id: post.id,
             }));
             setBody('');

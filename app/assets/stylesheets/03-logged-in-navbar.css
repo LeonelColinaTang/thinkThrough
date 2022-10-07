@@ -23,6 +23,7 @@
     color: rgba(41,41,41,1);
     fill: rgba(41, 41, 4, 1);
     margin-left: 0;
+    padding-top: 40px;
 }
 .left-navbar-icons-container{
     padding-bottom: 35px;
@@ -46,12 +47,11 @@
 
 .navbar-profile-pic{
     text-align: center;
+    padding-bottom: 16px;
 }
 .navbar-profile-link img{
     margin: 8px 24px;
-}
-.buttons-container div:first-child{
-    padding: 40px 0;
+    cursor: pointer;
 }
 
 .left-navbar-white-space{
@@ -63,4 +63,17 @@
     height: 1px;
     margin: 0;
     border: 0;
+}
+
+.logout-menu{
+    inset: auto auto 0px 0px;
+    position: absolute;
+    transform: translate(5px, -74px);
+    box-shadow: rgb(230 230 230) 0px 1px 4px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    min-width: 280px;
+    padding: 24px 0;
+    cursor: pointer;
 }

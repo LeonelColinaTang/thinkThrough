@@ -41,9 +41,6 @@ const CommentOptions = ({comment, setButtonType, setBody, setCommentId}) =>{
         </div>
     )
 
-    
-
-
 
 }
 

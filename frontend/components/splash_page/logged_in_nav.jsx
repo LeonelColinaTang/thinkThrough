@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { openModal } from "../../actions/modal_actions";
@@ -8,7 +8,7 @@ import { logoutUser } from "../../actions/session_actions";
 
 const LoggedInNav = ({ filtered, setFiltered }) =>{
 
-    
+    const [logoutMenu, setLogoutMenu] = useState(false);
 
     const history = useHistory();
     const dispatch = useDispatch(); 
@@ -74,10 +74,14 @@ const LoggedInNav = ({ filtered, setFiltered }) =>{
                     </div>
                 </div>
                 <div className="navbar-profile-pic">
-                    <a href="#" className="navbar-profile-link">
-                        <img src={window.smallGithubLogo} />
-                        {currentUser && <button className="header-button" onClick={()=>dispatch(logoutUser())} value="Log Out">Log Out</button>}
-                    </a>
+                    {currentUser && <a className="navbar-profile-link">
+                        <img src={window.smallGithubLogo} onClick={e => setLogoutMenu(!logoutMenu)}/>
+                        {logoutMenu && <div className="logout-menu">
+                            <div className="logout-option" onClick={() => dispatch(logoutUser())}>
+                                Sign Out
+                            </div>
+                        </div>}
+                    </a>}
                 </div>
             </div>
         </nav>
