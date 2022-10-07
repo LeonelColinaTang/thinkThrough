@@ -34,7 +34,8 @@ class Api::PostsController < ApplicationController
         @post = Post.find(params[:id])
         # debugger
         if @post.destroy
-            render :index
+            # debugger
+            render json: params[:id]
         else
             render json: @post.errors.full_messages, status: 422
         end

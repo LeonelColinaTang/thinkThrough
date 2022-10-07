@@ -15,6 +15,7 @@ class Api::CommentsController < ApplicationController
     end
 
      def update 
+      # debugger
         @comment = Comment.find(params[:id])
         if @comment && current_user.id == @comment.user_id 
            render :show if @comment.update(comment_params)
@@ -27,7 +28,7 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.find(params[:id])
         # debugger
         if @comment.destroy
-            render :index
+            render json: params[:id]
         else
             render json: @comment.errors.full_messages, status: 422
         end

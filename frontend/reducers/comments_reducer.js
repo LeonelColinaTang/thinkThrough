@@ -1,5 +1,6 @@
-import { RECEIVE_ALL_COMMENTS, RECEIVE_ONE_COMMENT } from "../actions/comment_actions";
+import { RECEIVE_ALL_COMMENTS, RECEIVE_ONE_COMMENT, REMOVE_ONE_COMMENT } from "../actions/comment_actions";
 import { RECEIVE_ONE_POST } from "../actions/post_actions";
+
 
 const commentsReducer = (state={}, action) =>{
     Object.freeze(state);
@@ -13,6 +14,10 @@ const commentsReducer = (state={}, action) =>{
             return nextState;
         case RECEIVE_ONE_POST:
             return action.post.comments ? action.post.comments : {};
+        case REMOVE_ONE_COMMENT:
+            // debugger
+            delete nextState[action.id];
+            return nextState;
         default:
             return state;
     }

@@ -3,14 +3,12 @@ import { useSelector } from "react-redux";
 
 
 
-const AsidePost = () => {
+const AsidePost = ({author}) => {
 
 
-    const readingToday = useSelector((state) => {
-        return Object.values(state.entities.posts)
-    })
-
-    const author = useSelector((state) => state.entities.posts)
+    const readingToday = useSelector((state) => Object.values(state.entities.posts))
+    // const someone = useSelector((state) => Object.values(state.entities.posts)[0].author)
+    // console.log("someone",someone)
     return (
         <aside className="right-aside">
             <div className="right-side-container">
@@ -29,11 +27,11 @@ const AsidePost = () => {
                 </div>
 
                 <div className="post-author">
-                    <div className="post-author-pic">
+                    <div className="single-post-author-pic">
                         <img src={window.kyle} />
                     </div>
-                    <div className="post-author-name">
-                        {author.author}
+                    <div className="single-post-author-name">
+                        {author}
                     </div>
                     <div className="post-author-followers">
 

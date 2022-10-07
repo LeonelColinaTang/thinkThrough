@@ -5,6 +5,7 @@ import { receiveErrors } from "./session_actions";
 export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_ONE_POST = "RECEIVE_ONE_POST";
 export const RECEIVE_POSTS_ERRORS = "RECEIVE_POSTS_ERRORS";
+export const REMOVE_ONE_POST = "REMOVE_ONE_POST";
 
 export const receiveAllPosts = (posts) =>({
     type: RECEIVE_ALL_POSTS,
@@ -19,6 +20,11 @@ export const receiveOnePost = (post) =>({
 export const receivePostsErrors = (errors) =>({
         type: RECEIVE_POSTS_ERRORS,
         errors
+})
+
+export const removeOnePost = (id) =>({
+    type: REMOVE_ONE_POST,
+    id
 })
 
 //Action thunk creators
@@ -40,9 +46,9 @@ export const updateOnePost = (post) => (dispatch) => (
     ))
 );
 
-export const deleteOnePost = (post) => (dispatch) => (
-    deletePost(post)
-    .then(() => dispatch(receiveOnePost()))
+export const deleteOnePost = (id) => (dispatch) => (
+    deletePost(id)
+    .then((id) => dispatch(receiveOnePost(id)))
 )
 
 export const getAllPosts = () => dispatch =>(

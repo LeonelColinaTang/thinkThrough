@@ -59,12 +59,61 @@
     padding: 0 24px;
 }
 .comment-box{
-    /* padding: 0 24px; */
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 8px;
+    padding: 10px;
+    border-radius: 4px;
 }
 .comment-box textarea{
     width: 100%;
     border: none;
-    box-shadow: rgb(0 0 0 / 12%) 0px 2px 8px;
     resize: none;
     outline: none;
+    padding: 5px 0px 0px 5px;
+}
+
+.comment-box button{
+    background: rgba(26, 137, 23, 1);
+    border-color: rgba(26, 137, 23, 1);
+    border: 1px solid rgba(26, 137, 23, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 4px 12px 6px;
+    border-radius: 99em;
+    cursor: pointer;
+}
+
+.comment-box button:hover{
+    background: rgba(15, 115, 12, 1);
+    border-color: rgba(15, 115, 12, 1);
+}
+.comment-options{
+    position: relative;
+    
+}
+.comment-options svg{
+    cursor: pointer;
+}
+.delete-options{
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 4px;
+    padding: 8px 0px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 1);
+
+}
+
+.delete-options p{
+    font-family: sone;
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(117,117,117,1);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.edit-option p:hover, .delete-option p:hover{
+    color: rgba(25, 25, 25, 1);
 }

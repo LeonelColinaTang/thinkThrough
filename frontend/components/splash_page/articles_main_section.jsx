@@ -25,7 +25,6 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
         
     });
     window.allPosts = allPosts
-    console.log(allPosts)
     return(
         <main className="articles-container">
             <ForYouMenu />

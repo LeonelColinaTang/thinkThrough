@@ -1,4 +1,26 @@
-.post-author-pic img{
+.single-post-author-pic img{
     width: 88px;
     border-radius: 50%;
+}
+.single-post-author-name{
+    margin-top: 16px;
+    font-family: sone-bold;
+    letter-spacing: 1px;
+}
+.post-author-follow button{
+    margin-top: 24px;
+    border: 1px solid rgba(26, 137, 23, 1);
+    background: rgba(26, 137, 23, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 7px 16px 9px;
+    border-radius: 99em;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.post-author-follow button:hover{
+    background: rgba(15, 115, 12, 1);
+    border-color: rgba(15,115,12,1);
 }

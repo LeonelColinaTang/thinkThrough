@@ -5,6 +5,8 @@ import { receiveErrors } from "./session_actions";
 export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
 export const RECEIVE_ONE_COMMENT = 'RECEIVE_ONE_COMMENT';
 export const RECEIVE_COMMENTS_ERRORS = 'RECEIVE_COMMENTS_ERRORS';
+export const REMOVE_ONE_COMMENT = 'REMOVE_ONE_COMMENT';
+
 
 //Actions
 export const receiveAllComments = (comments) =>({
@@ -20,6 +22,11 @@ export const receiveOneComment = (comment) =>({
 export const receiveCommentsErrors = (errors) =>({
     tpye: RECEIVE_COMMENTS_ERRORS,
     errors
+});
+
+export const removeOneComment = (id) => ({
+    type: REMOVE_ONE_COMMENT,
+    id
 });
 
 //Action thunk creators
@@ -41,9 +48,9 @@ export const updateOneComment = (comment) => (dispatch)=>(
     ))
 );
 
-export const deleteOneComment = (comment) => (dispatch)=>(
-    deleteComment(comment)
-    .then(()=> dispatch(receiveOneComment()))
+export const deleteOneComment = (id) => (dispatch)=>(
+    deleteComment(id)
+    .then((id)=> dispatch(removeOneComment(id)))
 );
 
 export const getAllComments = () => dispatch =>(
