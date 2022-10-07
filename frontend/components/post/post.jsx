@@ -49,7 +49,6 @@ const Post = ({post}) =>{
                     <h1>{post.title}</h1>
                 </div>
                 <div className="post-big-image">
-                    {/* here goes the image */}
                     <img src={window.postPicture} />
                 </div>
                 <div className="entire-post-body">
