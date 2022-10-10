@@ -1,4 +1,4 @@
-import { createLike, deleteLike } from "../util/likes_api_util";
+import { fetchLike, createLike, deleteLike } from "../util/likes_api_util";
 import { receiveErrors } from "./session_actions";
 
 //action constants
@@ -23,6 +23,16 @@ export const receiveLikeErrors = (errors) =>({
 })
 
 //Action thunk creators
+
+export const getOneLike = likeId => dispatch =>(
+    fetchLike(likeId)
+    .then(like => dispatch(receiveLike(like)),
+    errors => (
+        dispatch(receiveErrors(errors.responseJSON))
+    ))
+)
+
+
 export const addLike = like => dispatch =>(
     createLike(like)
     .then(res =>(

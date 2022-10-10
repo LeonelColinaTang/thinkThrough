@@ -1,3 +1,11 @@
+export const fetchLike = (id) =>(
+    $.ajax({
+        url:`api/likes/${id}`,
+        method: 'GET',
+    })
+)
+
+
 export const createLike = (like) =>(
     $.ajax({
         url: 'api/likes',
@@ -5,6 +13,7 @@ export const createLike = (like) =>(
         data: {like}
     })
 )
+
 
 export const deleteLike = (id) => (
     $.ajax({
