@@ -13,9 +13,11 @@ class Api::LikesController < ApplicationController
 
     def destroy
         @like = Like.find_by(post_id: params[:id])
-        debugger
+        
+        # debugger
         if @like && current_user.id === @like.user_id
-            render json: params[:id] if @like.destroy
+            # LikeId = @like.id
+            render json: current_user.id if @like.destroy
         else
             render json: @like.errors.full_messages, status: 422
         end
