@@ -1,6 +1,6 @@
 import { RECEIVE_LIKE, REMOVE_LIKE, RECEIVE_LIKE_ERRORS } from "../actions/like_actions";
 
-export default (state={}, action){
+export default (state={}, action)=>{
     Object.freeze(state);
 
     switch(action.type){
