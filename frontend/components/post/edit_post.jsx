@@ -27,7 +27,6 @@ const EditPostPage = ({match}) => {
     const [text, setText] = useState(post.body);
 
     const handleEditPost = () => {
-        // debugger
         dispatch(updateOnePost({
             id: match.params.id,
             title: title,

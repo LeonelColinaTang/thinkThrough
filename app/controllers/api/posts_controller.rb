@@ -1,7 +1,6 @@
 class Api::PostsController < ApplicationController
 
     def index
-        # debugger
         @posts = Post.all.includes(:user)
         render :index
     end
@@ -22,7 +21,6 @@ class Api::PostsController < ApplicationController
     end
 
     def update
-        # debugger
         @post = Post.find(params[:id])
         if @post && current_user.id == @post.user_id 
            render :show if @post.update(post_params)
@@ -33,9 +31,7 @@ class Api::PostsController < ApplicationController
 
     def destroy
         @post = Post.find(params[:id])
-        # debugger
         if @post.destroy
-            # debugger
             render json: params[:id]
         else
             render json: @post.errors.full_messages, status: 422

@@ -58,7 +58,7 @@ const AsideMainSection = () =>{
 
 
 
-                <div className="reading-today">
+                {/* <div className="reading-today">
                     <a href="#">
                         <h2>recently saved</h2>
                     </a>
@@ -86,7 +86,7 @@ const AsideMainSection = () =>{
                         )
                     })}
                 </div>
-                <a href="#">See all ({readingToday.length})</a>
+                <a href="#">See all ({readingToday.length})</a> */}
                 <div className="right-side-footer">
                     <div><a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank">LinkedIn</a></div>
                     <div><a href="https://github.com/leonel040792" target="_blank">Github</a></div>
