@@ -77,7 +77,7 @@ import moment from 'moment';
                                             <p>discover more of what matters to you</p>
                                         </div>
                                         <div className="discover-interests">
-                                            {Object.values(posts).map((post, idx) => {
+                                            {Object.values(posts).slice(0,10).map((post, idx) => {
                                                 return (
                                                     <a href="#" key={idx} className="side-interest">
                                                         <div>
@@ -90,50 +90,18 @@ import moment from 'moment';
                                     </div>
                                     <div className="side-footer-links">
                                         <div className="footer-link">
-                                            <a href="#">
-                                                Help
-                                            </a>
+                                            <a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank">LinkedIn</a>
                                         </div>
                                         <div className="footer-link">
-                                            <a href="#">
-                                                Status
-                                            </a>
+                                            <a href="https://github.com/leonel040792" target="_blank">Github</a>
                                         </div>
                                         <div className="footer-link">
-                                            <a href="#">
-                                                Writers
-                                            </a>
+                                            <a href="https://angel.co/u/leonel-colina" target="_blank">AngelList</a>
                                         </div>
                                         <div className="footer-link">
-                                            <a href="#">
-                                                Blog
-                                            </a>
+                                            <a href="#">Portfolio</a>
                                         </div>
-                                        <div className="footer-link">
-                                            <a href="#">
-                                                Careers
-                                            </a>
-                                        </div>
-                                        <div className="footer-link">
-                                            <a href="#">
-                                                Privacy
-                                            </a>
-                                        </div>
-                                        <div className="footer-link">
-                                            <a href="#">
-                                                Terms
-                                            </a>
-                                        </div>
-                                        <div className="footer-link">
-                                            <a href="#">
-                                                About
-                                            </a>
-                                        </div>
-                                        <div className="footer-link">
-                                            <a href="#">
-                                                Knowable
-                                            </a>
-                                        </div>
+    
                                     </div>
                                 </div>
                             </aside>

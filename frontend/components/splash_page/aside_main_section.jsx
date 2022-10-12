@@ -5,7 +5,7 @@ const AsideMainSection = () =>{
 
 
     const readingToday = useSelector((state)=>{
-        return Object.values(state.entities.posts)
+        return Object.values(state.entities.posts).sort(function () { return .5 - Math.random() });
     })
 
     return(
@@ -88,15 +88,10 @@ const AsideMainSection = () =>{
                 </div>
                 <a href="#">See all ({readingToday.length})</a>
                 <div className="right-side-footer">
-                    <div><a href="#">Help</a></div>
-                    <div><a href="#">Status</a></div>
-                    <div><a href="#">Writers</a></div>
-                    <div><a href="#">Blog</a></div>
-                    <div><a href="#">Careers</a></div>
-                    <div><a href="#">Privacy</a></div>
-                    <div><a href="#">Terms</a></div>
-                    <div><a href="#">About</a></div>
-                    <div><a href="#">Knowable</a></div>
+                    <div><a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank">LinkedIn</a></div>
+                    <div><a href="https://github.com/leonel040792" target="_blank">Github</a></div>
+                    <div><a href="https://angel.co/u/leonel-colina" target="_blank">AngelList</a></div>
+                    <div><a href="#">Portfolio</a></div>
                 </div>
             </div>
         </aside>

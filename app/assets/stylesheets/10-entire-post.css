@@ -83,6 +83,7 @@
 .post-like-comments > div,
 .post-save-delete > div{
     margin: 5px;
+    position: relative;
 }
 
 .post-likes-button,
@@ -90,4 +91,29 @@
 .post-save,
 .post-delete{
     cursor: pointer;
+}
+
+.post-options{
+    width: 150px;
+    position: absolute;
+    bottom: 15px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 4px;
+    padding: 8px 0px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.post-options p {
+    font-family: sone;
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(117, 117, 117, 1);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.edit-post-option p:hover,
+.delete-post-option p:hover {
+    color: rgba(25, 25, 25, 1);
 }

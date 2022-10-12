@@ -8,10 +8,11 @@ const likesReducer = (state={}, action) =>{
     switch(action.type){
         case RECEIVE_LIKE:
             // debugger
-            return action.like;
+            nextState[action.like.id] = action.like;
+            return nextState;
         case REMOVE_LIKE:
             // debugger
-            const likId= Object.values(nextState).filter(like => like.user_id === action.id)[0];
+            const likId= Object.values(nextState).filter(like => like.user_id === action.id);
             delete nextState[likId.id]
             return nextState;
         case RECEIVE_ONE_POST:

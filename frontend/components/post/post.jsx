@@ -11,15 +11,31 @@ const Post = ({post}) =>{
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const [comments, setComments] = useState(false)
+    //State to open or close the side comments
+    const [comments, setComments] = useState(false);
 
-    const numComments = useSelector((state)=> Object.values(state.entities.comments).length)
-    const ownPost = useSelector((state)=>{return state.session.id === post.user_id;})
-    const likes = useSelector((state) => Object.values(state.entities.likes))
+    // ask why post.comments doesn't work
+    const numComments = useSelector((state)=> Object.values(state.entities.comments).length);
 
-    const handleDelete = ()=>{
+    //current user id and its boolean
+    const ownPost = useSelector((state)=>{return state.session.id === post.user_id;});
+    const user = useSelector((state) => state.session.id);
+
+
+    const likes = useSelector((state) => Object.values(state.entities.likes));
+    //checks if current user is one of the likes
+    const liker = Boolean(likes.filter(like => like.user_id === user).length > 0);
+    const [likeHandler, setLikeHandler] = useState(liker);
+
+    const [postOptions, setPostOptions] = useState(false)
+
+    const handlePostDelete = ()=>{
         dispatch(deleteOnePost(post.id))
         history.push('/profile')
+    }
+
+    const handlePostEdit = (id) =>{
+        history.push(`/editPost/${id}`)
     }
 
     const handleComments = () =>{
@@ -27,8 +43,9 @@ const Post = ({post}) =>{
     }
 
     const handleLikes = (postId) =>{
-
-        if (likes.length===0){
+        // debugger
+        setLikeHandler(!likeHandler)
+        if (!likeHandler){
             dispatch(addLike({post_id: postId}))
         }else{
             dispatch(unLike(postId))
@@ -90,7 +107,20 @@ const Post = ({post}) =>{
                             </svg>
                         </div>
                         <div className="post-delete">
-                        { ownPost && <img src={window.delete} onClick={handleDelete}/>}
+                        {/* { ownPost && <img src={window.delete} onClick={handleDelete}/>}
+                         */}
+                            <svg onClick={e => setPostOptions(!postOptions)} width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M4.39 12c0 .55.2 1.02.59 1.41.39.4.86.59 1.4.59.56 0 1.03-.2 1.42-.59.4-.39.59-.86.59-1.41 0-.55-.2-1.02-.6-1.41A1.93 1.93 0 0 0 6.4 10c-.55 0-1.02.2-1.41.59-.4.39-.6.86-.6 1.41zM10 12c0 .55.2 1.02.58 1.41.4.4.87.59 1.42.59.54 0 1.02-.2 1.4-.59.4-.39.6-.86.6-1.41 0-.55-.2-1.02-.6-1.41a1.93 1.93 0 0 0-1.4-.59c-.55 0-1.04.2-1.42.59-.4.39-.58.86-.58 1.41zm5.6 0c0 .55.2 1.02.57 1.41.4.4.88.59 1.43.59.57 0 1.04-.2 1.43-.59.39-.39.57-.86.57-1.41 0-.55-.2-1.02-.57-1.41A1.93 1.93 0 0 0 17.6 10c-.55 0-1.04.2-1.43.59-.38.39-.57.86-.57 1.41z" fill="#000">
+                                </path>
+                            </svg>
+                            {postOptions && <div className="post-options">
+                                <div className="edit-post-option" onClick={e => handlePostEdit(post.id)}>
+                                    <p>Edit this post</p>
+                                </div>
+                                <div className="delete-post-option" onClick={handlePostDelete}>
+                                    <p>Delete</p>
+                                </div>
+                            </div>}
                         </div>
                     </div>
                 </div>
