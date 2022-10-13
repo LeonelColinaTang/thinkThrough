@@ -19,12 +19,9 @@ const Post = ({post}) =>{
 
     //current user id and its boolean
     const user = useSelector((state) => state.session.id);
-
+    console.log(user)
 
     const likes = useSelector((state) => Object.values(state.entities.likes));
-    //checks if current user is one of the likes
-    const liker = Boolean(likes.filter(like => like.user_id === user).length > 0);
-    const [likeHandler, setLikeHandler] = useState(liker);
 
     const [postOptions, setPostOptions] = useState(false)
 
@@ -42,10 +39,14 @@ const Post = ({post}) =>{
     }
 
     const handleLikes = (postId) =>{
-        setLikeHandler(!likeHandler)
-        if (!likeHandler){
+        let liker2 = Boolean(likes.filter(like => like.user_id === user).length > 0);
+
+        if (!liker2){
+            // debugger
             dispatch(addLike({post_id: postId}))
+
         }else{
+            debugger
             dispatch(unLike(postId))
         }
     }
