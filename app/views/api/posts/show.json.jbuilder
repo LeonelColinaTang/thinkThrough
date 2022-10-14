@@ -1,7 +1,7 @@
 # @post.set! post.id do
     json.partial! 'api/posts/post', post: @post
 
-
+    json.photoUrl url_for(@post.photo)
 
     json.author @post.user.email
 
@@ -14,6 +14,7 @@
         end
     end
 
+    
     json.likes do 
         @post.likes.each do |like|
         json.set! like.id do 

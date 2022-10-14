@@ -16,6 +16,7 @@ const WritingPostPage = () =>{
  
     const [text, setText]= useState('');
     const [title, setTitle] = useState('');
+    const [postPic, setPostPic] = useState('');
 
     const handleCreatePost = ()=>{
 
@@ -23,6 +24,7 @@ const WritingPostPage = () =>{
             title: title,
             body: text,
             user_id: user.id,
+            photoUrl: postPic,
         }))
         history.push('/profile')
     }
@@ -38,25 +40,28 @@ const WritingPostPage = () =>{
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={title}
                         onChange={(e, medium) => setTitle(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Title'}
                          }}
-                    />
+                    /> */}
                 </div>
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={text}
                         onChange={(e, medium) => setText(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Tell your story...'} 
                         }}
-                    />
+                    /> */}
                 </div>
+                <form className="post-image">
+                    <input type="file" value={postPic} onChange={e => setPostPic(e.currentTarget.files[0])} />
+                </form>
             </div>
         </div>
     )

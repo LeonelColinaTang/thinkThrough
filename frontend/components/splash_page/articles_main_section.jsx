@@ -72,7 +72,7 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
                                 </div>
                             </div>
                             <div className="single-post-image">
-                                <img src={window.smallGithubLogo} />
+                                <img src={post.photoUrl ? post.photoUrl : window.smallGithubLogo} />
                             </div>
                         </article>
                     )

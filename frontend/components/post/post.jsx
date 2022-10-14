@@ -10,7 +10,7 @@ const Post = ({post}) =>{
 
     const history = useHistory();
     const dispatch = useDispatch();
-
+    console.log(post.photoUrl)
     //State to open or close the side comments
     const [comments, setComments] = useState(false);
 
@@ -74,7 +74,7 @@ const Post = ({post}) =>{
                     <h1>{post.title}</h1>
                 </div>
                 <div className="post-big-image">
-                    <img src={window.postPicture} />
+                    <img src={post.photoUrl? post.photoUrl : window.postPicture} />
                 </div>
                 <div className="entire-post-body">
                     <p>{post.body}</p>
