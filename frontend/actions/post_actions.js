@@ -28,14 +28,17 @@ export const removeOnePost = (id) =>({
 })
 
 //Action thunk creators
-export const createOnePost = (post) => (dispatch) =>(
-    createPost(post)
-    .then(post => (
-        dispatch(receiveOnePost(post))
-        ), errors => (
-            dispatch(receiveErrors(errors.responseJSON))
-        ))
-);
+export const createOnePost = (post) => (dispatch) =>{
+    return(
+
+        createPost(post)
+        .then(post => (
+            dispatch(receiveOnePost(post))
+            ), errors => (
+                dispatch(receiveErrors(errors.responseJSON))
+            ))
+    )
+ };
 
 export const updateOnePost = (post) => (dispatch) => (
     updatePost(post)

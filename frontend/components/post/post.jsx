@@ -42,11 +42,9 @@ const Post = ({post}) =>{
         let liker2 = Boolean(likes.filter(like => like.user_id === user).length > 0);
 
         if (!liker2){
-            // debugger
             dispatch(addLike({post_id: postId}))
 
         }else{
-            debugger
             dispatch(unLike(postId))
         }
     }

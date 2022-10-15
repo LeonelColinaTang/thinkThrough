@@ -125,7 +125,8 @@
 }
 
 .single-post-image img{
-    width: 112px;
-    height: 112px;
+    width: 200px;
+    max-height: 125px;
+    margin-right: 20px;
 }
 

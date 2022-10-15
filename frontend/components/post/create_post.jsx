@@ -20,14 +20,25 @@ const WritingPostPage = () =>{
 
     const handleCreatePost = ()=>{
 
-        dispatch(createOnePost({
-            title: title,
-            body: text,
-            user_id: user.id,
-            photoUrl: postPic,
-        }))
+
+        const formData = new FormData();
+        formData.append('post[title]', title);
+        formData.append('post[body]', text);
+        formData.append('post[user_id]', user.id);
+        formData.append('post[photo]', postPic);
+
+        for (var key of formData.entries()) {
+            console.log(key[0] + ', ' + key[1]);
+        }
+
+        dispatch(createOnePost(formData));
+
         history.push('/profile')
     }
+
+    // const handlePic = (e) =>{
+    //     setPostPic(e.currentTarget.files[0])
+    // }
 
     return(
         <div className="create-post-container" >
@@ -40,27 +51,27 @@ const WritingPostPage = () =>{
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    {/* < Editor
+                    < Editor
                         text={title}
                         onChange={(e, medium) => setTitle(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Title'}
                          }}
-                    /> */}
+                    />
                 </div>
                 <div className="post-field">
-                    {/* < Editor
+                    < Editor
                         text={text}
                         onChange={(e, medium) => setText(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Tell your story...'} 
                         }}
-                    /> */}
+                    />
                 </div>
                 <form className="post-image">
-                    <input type="file" value={postPic} onChange={e => setPostPic(e.currentTarget.files[0])} />
+                    <input type="file" onChange={e => setPostPic(e.currentTarget.files[0])} />
                 </form>
             </div>
         </div>
