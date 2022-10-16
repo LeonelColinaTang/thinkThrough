@@ -16,7 +16,7 @@ const WritingPostPage = () =>{
  
     const [text, setText]= useState('');
     const [title, setTitle] = useState('');
-    const [postPic, setPostPic] = useState('');
+    const [postPic, setPostPic] = useState(null);
 
     const handleCreatePost = ()=>{
 
@@ -25,11 +25,14 @@ const WritingPostPage = () =>{
         formData.append('post[title]', title);
         formData.append('post[body]', text);
         formData.append('post[user_id]', user.id);
-        formData.append('post[photo]', postPic);
+        if (postPic){
+            formData.append('post[photo]', postPic);
+        }
 
         for (var key of formData.entries()) {
             console.log(key[0] + ', ' + key[1]);
         }
+
 
         dispatch(createOnePost(formData));
 
