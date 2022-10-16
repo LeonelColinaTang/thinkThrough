@@ -20,7 +20,6 @@ const WritingPostPage = () =>{
 
     const handleCreatePost = ()=>{
 
-
         const formData = new FormData();
         formData.append('post[title]', title);
         formData.append('post[body]', text);
@@ -32,7 +31,6 @@ const WritingPostPage = () =>{
         for (var key of formData.entries()) {
             console.log(key[0] + ', ' + key[1]);
         }
-
 
         dispatch(createOnePost(formData));
 
