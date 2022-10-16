@@ -76,7 +76,6 @@ const Post = ({post}) =>{
                 </div>
                 <div className="entire-post-body">
                     <p>{post.body}</p>
-                    {/* <p>lorem ipsum whatever I don't remember Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae velit sunt a recusandae similique debitis ratione excepturi? Qui quae laudantium, deserunt inventore nostrum commodi, pariatur ut voluptas nam accusamus consequuntur dignissimos ipsum culpa voluptatum ratione ex praesentium hic odit rem deleniti dolores veniam! Ea maiores porro eos, at sequi labore consectetur, maxime non minima impedit assumenda fuga. Id, nostrum a?</p> */}
                 </div>
                 <div className="post-buttons">
                     <div className="post-like-comments">
