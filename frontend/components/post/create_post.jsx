@@ -39,10 +39,6 @@ const WritingPostPage = () =>{
         history.push('/profile')
     }
 
-    // const handlePic = (e) =>{
-    //     setPostPic(e.currentTarget.files[0])
-    // }
-
     return(
         <div className="create-post-container" >
             <div className="create-navbar">
