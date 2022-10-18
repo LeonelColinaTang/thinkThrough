@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-require('medium-editor/dist/css/medium-editor.css');
-require('medium-editor/dist/css/themes/mani.css');
-import Editor from 'react-medium-editor';
+// require('medium-editor/dist/css/medium-editor.css');
+// require('medium-editor/dist/css/themes/mani.css');
+// import Editor from 'react-medium-editor';
 import { useSelector, useDispatch } from "react-redux";
 import { createOnePost } from "../../actions/post_actions";
 import { useHistory } from "react-router-dom";
@@ -48,24 +48,24 @@ const WritingPostPage = () =>{
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={title}
                         onChange={(e, medium) => setTitle(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Title'}
                          }}
-                    />
+                    /> */}
                 </div>
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={text}
                         onChange={(e, medium) => setText(medium.origElements.innerText)}
                         options={{ 
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text: 'Tell your story...'} 
                         }}
-                    />
+                    /> */}
                 </div>
                 <form className="post-image">
                     <input type="file" onChange={e => setPostPic(e.currentTarget.files[0])} />
