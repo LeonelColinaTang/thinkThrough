@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
-import Editor from 'react-medium-editor';
-require('medium-editor/dist/css/medium-editor.css');
-require('medium-editor/dist/css/themes/mani.css');
+// import Editor from 'react-medium-editor';
+// require('medium-editor/dist/css/medium-editor.css');
+// require('medium-editor/dist/css/themes/mani.css');
 import { createOnePost, getOnePost, updateOnePost } from "../../actions/post_actions";
 
 
@@ -47,24 +47,24 @@ const EditPostPage = ({match}) => {
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={title}
                         onChange={(e, medium) => setTitle(medium.origElements.innerText)}
                         options={{
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { title }
                         }}
-                    />
+                    /> */}
                 </div>
                 <div className="post-field">
-                    < Editor
+                    {/* < Editor
                         text={text}
                         onChange={(e, medium) => setText(medium.origElements.innerText)}
                         options={{
                             toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
                             placeholder: { text }
                         }}
-                    />
+                    /> */}
                 </div>
             </div>
         </div>
