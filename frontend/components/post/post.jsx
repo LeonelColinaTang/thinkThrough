@@ -10,7 +10,7 @@ const Post = ({post}) =>{
 
     const history = useHistory();
     const dispatch = useDispatch();
-    console.log(post.photoUrl)
+    
     //State to open or close the side comments
     const [comments, setComments] = useState(false);
 

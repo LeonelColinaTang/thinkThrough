@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// require('medium-editor/dist/css/medium-editor.css');
-// require('medium-editor/dist/css/themes/mani.css');
-// import Editor from 'react-medium-editor';
 import { useSelector, useDispatch } from "react-redux";
 import { createOnePost } from "../../actions/post_actions";
 import { useHistory } from "react-router-dom";
@@ -14,15 +11,15 @@ const WritingPostPage = () =>{
     const dispatch = useDispatch();
     const user = useSelector((state) => state.entities.users[state.session.id])
  
-    const [text, setText]= useState('');
     const [title, setTitle] = useState('');
+    const [body, setBody]= useState('');
     const [postPic, setPostPic] = useState(null);
 
     const handleCreatePost = ()=>{
 
         const formData = new FormData();
         formData.append('post[title]', title);
-        formData.append('post[body]', text);
+        formData.append('post[body]', body);
         formData.append('post[user_id]', user.id);
         if (postPic){
             formData.append('post[photo]', postPic);
@@ -48,24 +45,10 @@ const WritingPostPage = () =>{
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    {/* < Editor
-                        text={title}
-                        onChange={(e, medium) => setTitle(medium.origElements.innerText)}
-                        options={{ 
-                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
-                            placeholder: { text: 'Title'}
-                         }}
-                    /> */}
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div className="post-field">
-                    {/* < Editor
-                        text={text}
-                        onChange={(e, medium) => setText(medium.origElements.innerText)}
-                        options={{ 
-                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
-                            placeholder: { text: 'Tell your story...'} 
-                        }}
-                    /> */}
+                    <input type="text" value={body} onChange={(e) => setBody(e.target.value)} />
                 </div>
                 <form className="post-image">
                     <input type="file" onChange={e => setPostPic(e.currentTarget.files[0])} />

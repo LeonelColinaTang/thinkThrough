@@ -22,8 +22,8 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
             return Object.values(state.entities.posts).filter(post => post.user_id === state.session.id)
         }
         return Object.values(state.entities.posts)
-        
     });
+
     window.allPosts = allPosts
     return(
         <main className="articles-container">
