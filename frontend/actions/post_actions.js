@@ -40,14 +40,16 @@ export const createOnePost = (post) => (dispatch) =>{
     )
  };
 
-export const updateOnePost = (post) => (dispatch) => (
+export const updateOnePost = (post) => (dispatch) => {
+    // debugger
+    return(
     updatePost(post)
     .then(post => (
         dispatch(receiveOnePost(post))
     ), errors =>(
         dispatch(receiveErrors(errors.responseJSON))
-    ))
-);
+    )))
+};
 
 export const deleteOnePost = (id) => (dispatch) => (
     deletePost(id)
