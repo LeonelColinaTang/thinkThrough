@@ -23,8 +23,17 @@ const EditPostPage = ({match}) => {
 
     console.log("POST",post);
 
-    const [title, setTitle] = useState(post.title);
-    const [body, setBody] = useState(post.body);
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+
+    useEffect(() => {
+        debugger
+
+        if(Object.values(post).length > 0){
+            setTitle(post[match.params.id].title);
+            setBody(post[match.params.id].body)
+        }
+    }, [post])
 
     const handleEditPost = () => {
         // debugger
