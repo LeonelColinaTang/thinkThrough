@@ -11,7 +11,7 @@
 .for-you-menu{
     display: flex;
     max-width: 692px;
-        box-shadow: rgb(230 230 230) 0px -1px 0px inset;
+        box-shadow: rgb(230, 230, 230) 0px -1px 0px inset;
 }
 .for-you-item{
     margin-right: 32px;
