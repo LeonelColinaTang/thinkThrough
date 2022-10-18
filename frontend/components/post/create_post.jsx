@@ -45,10 +45,10 @@ const WritingPostPage = () =>{
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" />
                 </div>
                 <div className="post-field">
-                    <input type="text" value={body} onChange={(e) => setBody(e.target.value)} />
+                    <input type="text" value={body} onChange={(e) => setBody(e.target.value)} placeholder="Tell your story..." />
                 </div>
                 <form className="post-image">
                     <input type="file" onChange={e => setPostPic(e.currentTarget.files[0])} />

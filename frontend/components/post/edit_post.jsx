@@ -16,21 +16,21 @@ const EditPostPage = ({match}) => {
     useEffect(() => {
       dispatch(getOnePost(match.params.id))
     }, [])
+    const user = useSelector((state) => state.entities.users[state.session.id])
+    const post = useSelector((state) => state.entities.posts)
     
 
 
-    const user = useSelector((state) => state.entities.users[state.session.id])
-    const post = useSelector((state) => state.entities.posts)
-   
+    console.log("POST",post);
 
     const [title, setTitle] = useState(post.title);
-    const [text, setText] = useState(post.body);
+    const [body, setBody] = useState(post.body);
 
     const handleEditPost = () => {
         dispatch(updateOnePost({
             id: match.params.id,
             title: title,
-            body: text,
+            body: body,
             user_id: user.id,
         }))
         history.push('/profile')
@@ -47,24 +47,10 @@ const EditPostPage = ({match}) => {
             </div>
             <div className="create-editor-container">
                 <div className="post-field">
-                    {/* < Editor
-                        text={title}
-                        onChange={(e, medium) => setTitle(medium.origElements.innerText)}
-                        options={{
-                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
-                            placeholder: { title }
-                        }}
-                    /> */}
+                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder={`${title}`}/>
                 </div>
                 <div className="post-field">
-                    {/* < Editor
-                        text={text}
-                        onChange={(e, medium) => setText(medium.origElements.innerText)}
-                        options={{
-                            toolbar: { buttons: ['bold', 'italic', 'underline', 'anchor'] },
-                            placeholder: { text }
-                        }}
-                    /> */}
+                    <input type="text" value={body} onChange={(e) => setBody(e.target.value)} placeholder={`${body}`} />
                 </div>
             </div>
         </div>
