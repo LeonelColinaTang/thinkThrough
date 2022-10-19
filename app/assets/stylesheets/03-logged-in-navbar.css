@@ -32,7 +32,9 @@
     text-decoration: none;
     color: rgba(117, 117, 117, 1);
 }
-
+.left-navbar-icons-container svg:hover{
+    cursor: pointer;
+}
 .navbar-icons-logged-in{
     text-align: center;
 }

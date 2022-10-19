@@ -13,6 +13,7 @@ const LandingNavbar = () =>{
                 <a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank"><img src={window.smallLinkedinLogo} className="small-logo"/></a>
                 <a href="https://github.com/LeonelColinaTang" target="_blank"><img src={window.smallGithubLogo} className="small-logo" /></a>
                 <a href="https://angel.co/u/leonel-colina" target="_blank"><img src={window.smallAngelistLogo} className="small-logo" /></a>
+                <a href="https://leonelcolinatang.github.io/" target="_blank"><img src={window.website} className="small-logo" /></a>
                 <a href="#" onClick={() => dispatch(openModal('login'))} id="login-navbar-link">Sign in</a>
                 <button onClick={() => dispatch(openModal('signup'))} className="get-started-button">Get Started</button>
             </div>

@@ -13,7 +13,7 @@ const AsideMainSection = () =>{
             <div className="right-side-container">
                 <div className="right-inside-container">
                     <div className="membership-right-button">
-                        <a href="#">become a member</a>
+                        <a href="https://leonelcolinatang.github.io/" target="_blank">Get to know the developer</a>
                     </div>
                 </div>
                 <div className="search-container">
@@ -91,7 +91,7 @@ const AsideMainSection = () =>{
                     <div><a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank">LinkedIn</a></div>
                     <div><a href="https://github.com/leonel040792" target="_blank">Github</a></div>
                     <div><a href="https://angel.co/u/leonel-colina" target="_blank">AngelList</a></div>
-                    <div><a href="#">Portfolio</a></div>
+                    <div><a href="https://leonelcolinatang.github.io/" target="_blank">Portfolio</a></div>
                 </div>
             </div>
         </aside>
