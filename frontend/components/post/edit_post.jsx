@@ -20,9 +20,6 @@ const EditPostPage = ({match}) => {
     const post = useSelector((state) => state.entities.posts)
     
 
-
-    console.log("POST",post);
-
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
 
