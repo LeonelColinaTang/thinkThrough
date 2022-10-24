@@ -62,7 +62,7 @@ import moment from 'moment';
                                                         </div>
                                                     </div>
                                                     <a href="#" className="post-right-pic">
-                                                        <img src={window.smallLinkedinLogo} />
+                                                        <img src={post.photoUrl ? post.photoUrl : window.postPicture} />
                                                     </a>
                                                 </div>
                                             </div>
