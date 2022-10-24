@@ -37,7 +37,6 @@ const CommentOptions = ({comment, setButtonType, setBody, setCommentId}) =>{
                     <p>Delete</p>
                 </div>
             </div>}
-
         </div>
     )
 

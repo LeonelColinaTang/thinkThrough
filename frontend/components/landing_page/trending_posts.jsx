@@ -27,7 +27,7 @@ const trendingPosts = () => {
                         </div>
                         <div className="post-info-container">
                             <div className="creator-trending-post">
-                                <img src={window.smallTrendingLogo} />
+                                <img src={post.photoUrl ? post.photoUrl : window.postPicture} />
                                 <a href="#">{post.author}</a>
                             </div>
                             <div className="title-trending-post">
