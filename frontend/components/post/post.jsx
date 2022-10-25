@@ -38,8 +38,8 @@ const Post = ({post}) =>{
     }
 
     let liker = Boolean(likes.filter(like => like.user_id === user).length > 0);
+    
     const handleLikes = (postId) =>{
-
         if (!liker){
             liker = !liker;
             dispatch(addLike({post_id: postId}))

@@ -10,7 +10,6 @@ const CommentOptions = ({comment, setButtonType, setBody, setCommentId}) =>{
 
     const [options, setOptions] = useState(false)
 
-
     const handleDelete = () =>{
         dispatch(deleteOneComment(comment.id))
     }
@@ -39,8 +38,6 @@ const CommentOptions = ({comment, setButtonType, setBody, setCommentId}) =>{
             </div>}
         </div>
     )
-
-
 }
 
 export default CommentOptions;

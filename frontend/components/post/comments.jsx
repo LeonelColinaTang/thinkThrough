@@ -106,7 +106,6 @@ const Comments = ({post, setComments}) =>{
             </div>
         </>
     )
-
 }
 
 
