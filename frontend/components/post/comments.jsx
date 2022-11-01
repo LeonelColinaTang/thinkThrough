@@ -77,12 +77,15 @@ const Comments = ({post, setComments}) =>{
                                         <p>{comment.author}</p>
                                     </div>
                                 </div>
-                                <CommentOptions 
-                                    comment={comment} 
-                                    setButtonType={setButtonType}
-                                    setBody={setBody}
-                                    setCommentId={setCommentId}
-                                />
+                                {user === comment.user_id &&
+                                    <CommentOptions
+                                        comment={comment}
+                                        setButtonType={setButtonType}
+                                        setBody={setBody}
+                                        setCommentId={setCommentId}
+                                    />
+                                }
+                                
                             </div>
                             <div className="comment-body">
                                 <p>{comment.body}</p>
