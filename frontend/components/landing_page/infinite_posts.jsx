@@ -90,7 +90,7 @@ import moment from 'moment';
                                     </div>
                                     <div className="side-footer-links">
                                         <div className="footer-link">
-                                            <a href="https://www.linkedin.com/in/leonel-colina-455531118/" target="_blank">LinkedIn</a>
+                                            <a href="https://www.linkedin.com/in/leonel-colina/" target="_blank">LinkedIn</a>
                                         </div>
                                         <div className="footer-link">
                                             <a href="https://github.com/leonel040792" target="_blank">Github</a>
