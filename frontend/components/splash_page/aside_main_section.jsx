@@ -78,6 +78,7 @@ const AsideMainSection = () =>{
                                     </div>
                                 </div>
                                 <div className="today-author-title">
+                                
                                     <a href="#">
                                         {post.title}
                                     </a>
@@ -89,7 +90,7 @@ const AsideMainSection = () =>{
                 <a href="#">See all ({readingToday.length})</a> */}
                 <div className="right-side-footer">
                     <div><a href="https://www.linkedin.com/in/leonel-colina/" target="_blank">LinkedIn</a></div>
-                    <div><a href="https://github.com/leonel040792" target="_blank">Github</a></div>
+                    <div><a href="https://github.com/LeonelColinaTang" target="_blank">Github</a></div>
                     <div><a href="https://angel.co/u/leonel-colina" target="_blank">AngelList</a></div>
                     <div><a href="https://leonelcolinatang.github.io/" target="_blank">Portfolio</a></div>
                 </div>

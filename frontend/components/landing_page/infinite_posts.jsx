@@ -93,7 +93,7 @@ import moment from 'moment';
                                             <a href="https://www.linkedin.com/in/leonel-colina/" target="_blank">LinkedIn</a>
                                         </div>
                                         <div className="footer-link">
-                                            <a href="https://github.com/leonel040792" target="_blank">Github</a>
+                                            <a href="https://github.com/LeonelColinaTang" target="_blank">Github</a>
                                         </div>
                                         <div className="footer-link">
                                             <a href="https://angel.co/u/leonel-colina" target="_blank">AngelList</a>
