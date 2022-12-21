@@ -6,7 +6,7 @@ import { getAllPosts } from "../../actions/post_actions";
 import { Link } from "react-router-dom";
 
 
-const ArticlesMainSection = ({filtered, setFiltered}) =>{
+const ArticlesMainSection = ({filtered, setFiltered, futureFeature, setFutureFeature}) =>{
 
 
     const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
                                 <div className="name-date-single-post-container">
                                     <div className="post-author-pic">
                                         <a href="#">
-                                            <img src={window.smallLinkedinLogo} />
+                                            <img src={window.kyle} />
                                         </a>
                                     </div>
                                     <div className="post-author-name">
@@ -63,7 +63,9 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
                                         <div>{post.tag}</div>
                                         <div>{post.length}</div>
                                     </div>
-                                    <div className="individual-post-save">
+                                    <div className="individual-post-save" onClick={(e)=>{
+                                        e.preventDefault();
+                                        setFutureFeature(!futureFeature)}}>
                                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
                                             <path d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18V2.5zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .8.4l5.7-4.4 5.7 4.4a.5.5 0 0 0 .8-.4v-8.5a.5.5 0 0 0-1 0v7.48l-5.2-4a.5.5 0 0 0-.6 0l-5.2 4V7z" fill="#292929">
                                             </path>
@@ -72,7 +74,8 @@ const ArticlesMainSection = ({filtered, setFiltered}) =>{
                                 </div>
                             </div>
                             <div className="single-post-image">
-                                <img src={post.photoUrl ? post.photoUrl : window.smallGithubLogo} />
+                                {/* <img src={post.photoUrl ? post.photoUrl : window.smallGithubLogo} /> */}
+                                {post.photoUrl && <img src={post.photoUrl} />}
                             </div>
                         </article>
                     )

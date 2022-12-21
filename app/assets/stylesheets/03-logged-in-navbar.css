@@ -79,3 +79,27 @@
     padding: 24px 0;
     cursor: pointer;
 }
+
+.unfinished-feature{
+    font-size: 22px;
+    font-family: sone-bold;
+    background: rgba(255,255,255,1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(41, 41, 4, 1);
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(230 230 230) 0px 1px 4px;
+}
+
+.feature-x{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}

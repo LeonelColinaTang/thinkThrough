@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const AsideMainSection = () =>{
 
@@ -34,26 +35,26 @@ const AsideMainSection = () =>{
                             <div key={idx} className="today-post">
                                 <div>
                                     <div className="today-author-pic">
-                                        <a href="#">
+                                        <Link to={`/posts/${post.id}`} >
                                             <img src={window.smallLinkedinLogo} />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="today-author-name">
-                                        <a href="#">
+                                        <Link to={`/posts/${post.id}`} >
                                             {post.author}
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="today-author-title">
-                                    <a href="#">
+                                    <Link to={`/posts/${post.id}`} >
                                         {post.title}
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         )
                     })}
                 </div>
-                <a href="#">See the full list</a>
+                <a href="#">Get other posts</a>
 
 
 
