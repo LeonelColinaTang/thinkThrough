@@ -75,7 +75,7 @@ const LoggedInNav = ({ filtered, setFiltered }) =>{
                 </div>
                 <div className="navbar-profile-pic">
                     {currentUser && <a className="navbar-profile-link">
-                        <img src={window.smallGithubLogo} onClick={e => setLogoutMenu(!logoutMenu)}/>
+                        <img src={window.kyle} onClick={e => setLogoutMenu(!logoutMenu)}/>
                         {logoutMenu && <div className="logout-menu">
                             <div className="logout-option" onClick={() => dispatch(logoutUser())}>
                                 Sign Out
