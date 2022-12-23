@@ -103,3 +103,7 @@
     right: 15px;
     cursor: pointer;
 }
+
+.logout-option{
+    font-family: sone;
+}

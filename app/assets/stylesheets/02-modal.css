@@ -78,3 +78,7 @@
     border-radius: 20px;
     height: 30px;
 }
+
+.other-form > button, .form-submit, .demo{
+    cursor: pointer;
+}
