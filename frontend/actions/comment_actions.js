@@ -17,7 +17,7 @@ export const receiveAllComments = (comments) =>({
 export const receiveOneComment = (comment) =>({
     type: RECEIVE_ONE_COMMENT,
     comment
-});
+}); 
 
 export const receiveCommentsErrors = (errors) =>({
     tpye: RECEIVE_COMMENTS_ERRORS,

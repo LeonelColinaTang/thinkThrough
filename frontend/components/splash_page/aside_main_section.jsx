@@ -2,12 +2,17 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const AsideMainSection = () =>{
+const AsideMainSection = ({setSearchText}) =>{
 
 
     const readingToday = useSelector((state)=>{
         return Object.values(state.entities.posts).sort(function () { return .5 - Math.random() });
     })
+
+    const handleSearchText = (e) =>{
+        console.log(e.target.value)
+        setSearchText(e.target.value)
+    }
 
     return(
         <aside className="right-aside">
@@ -22,7 +27,7 @@ const AsideMainSection = () =>{
                         <span>
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="rgba(8, 8, 8, 1)"><path d="M20.07 18.93l-4.16-4.15a6 6 0 1 0-.88.88l4.15 4.16a.62.62 0 1 0 .89-.89zM6.5 11a4.75 4.75 0 1 1 9.5 0 4.75 4.75 0 0 1-9.5 0z"></path></svg>
                         </span>
-                        <input type="text" placeholder="Search" />
+                        <input type="text" placeholder="Search" onChange={handleSearchText}/>
                     </div>
                 </div>
                 <div className="reading-today">

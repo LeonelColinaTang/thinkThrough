@@ -8,6 +8,7 @@ const Splash = () =>{
 
     const [filtered, setFiltered] = useState(false);
     const [futureFeature, setFutureFeature] = useState(false);
+    const [searchText, setSearchText] = useState('');
 
     return(
         <div className="nav-logged-in-container">
@@ -28,8 +29,9 @@ const Splash = () =>{
                 setFiltered={setFiltered}
                 futureFeature={futureFeature}
                 setFutureFeature={setFutureFeature}
+                searchText={searchText}
             />
-            <AsideMainSection />
+            <AsideMainSection setSearchText={setSearchText}/>
         </div>
     )
 }

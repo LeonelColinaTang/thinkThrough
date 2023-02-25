@@ -18,7 +18,7 @@ const WritingPostPage = () =>{
     const handleCreatePost = ()=>{
 
         const formData = new FormData();
-        debugger
+        // debugger
         formData.append('post[title]', title);
         formData.append('post[body]', body);
         formData.append('post[user_id]', user.id);

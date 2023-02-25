@@ -6,7 +6,7 @@ import { getAllPosts } from "../../actions/post_actions";
 import { Link } from "react-router-dom";
 
 
-const ArticlesMainSection = ({filtered, setFiltered, futureFeature, setFutureFeature}) =>{
+const ArticlesMainSection = ({filtered, setFiltered, futureFeature, setFutureFeature, searchText}) =>{
 
 
     const dispatch = useDispatch();
@@ -29,7 +29,13 @@ const ArticlesMainSection = ({filtered, setFiltered, futureFeature, setFutureFea
         <main className="articles-container">
             <ForYouMenu />
             <div className="posts-index-container">
-                {allPosts.map((post, idx) => {
+                {allPosts.filter(post=>{
+                    if(searchText === ''){
+                        return post
+                    }else{
+                        return post.title.toLowerCase().includes(searchText.toLowerCase())
+                    }
+                }).map((post, idx) => {
                     return (
                         <article className="single-post" key={idx}>
                             <div className="single-post-container">
